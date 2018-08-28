@@ -4,32 +4,33 @@
 */
 import java.util.Scanner;
 
-public final class Solution {
-    /**. the class solution**/
-    private Solution() {
-        /**. constructor**/
-    } /**.
+public class Solution {
+	/**.
+    the class solution**/
+	private Solution() {
+		/**. constructor**/
+	}/**.
     @param args of type string : command line args**/
-    public static void main(String[] args) {
-        /*main function*/
-        Scanner s = new Scanner(System.in);      
+	public static void main(String[] args) {
+		Scanner s=new Scanner(System.in);      
         int base = s.nextInt();
         int exponent = s.nextInt();
-        if (base >= 0 && exponent == 0) {
-            int result = 1;
-        }
-        else
-            if (base == 0 && exponent >= 1) {
-            int result = 0;
-            }
-        else {
-            for (int i = 1; i <= exponent; i++) {
-                base *= exponent;
-            }       
-        }
-        System.out.println("power of the number:" + base);
+        long result = power(base, exponent);
+        System.out.println(result);
     }
-    /*
-    Need to write the power function and print the output.
-    */
+    /**
+     * {recursion function for power}.
+     *
+     * @param      base     {type int }.
+     * @param      e     {type int}.
+     *
+     * @return     { returns the power }.
+     */
+    public static long power(final int base, final int e) {
+        if (e != 0) {
+            return (base * power(base, e - 1));
+        } else {
+            return 1;
+        }
+    }
 }
