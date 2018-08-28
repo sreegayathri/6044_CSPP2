@@ -12,7 +12,7 @@ public final class Solution {
     } /**.
     @param args of type string : command line args**/
     public static void main(String[] args) {
-        Scanner s=new Scanner(System.in);      
+        Scanner s = new Scanner(System.in);      
         int base = s.nextInt();
         int exponent = s.nextInt();
         long result = power(base, exponent);
