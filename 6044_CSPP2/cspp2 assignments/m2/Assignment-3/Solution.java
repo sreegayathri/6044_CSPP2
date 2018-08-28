@@ -9,7 +9,7 @@ public final class Solution {
     the class solution**/
 	private Solution() {
 		/**. constructor**/
-	}/**.
+	} /**.
     @param args of type string : command line args**/
 	public static void main(String[] args) {
 		Scanner s=new Scanner(System.in);      
