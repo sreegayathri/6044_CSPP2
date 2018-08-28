@@ -34,7 +34,4 @@ public final class Solution {
         double value2 = numerator2 / denominator;
         System.out.println(value1 + " " + value2);
     }
-    /*
-    Need to write the rootsOfQuadraticEquation function and print the output.
-    */
 }
