@@ -5,14 +5,14 @@
 import java.util.Scanner;
 
 public final class Solution {
-	/**.
+    /**.
     the class solution**/
-	private Solution() {
-		/**. constructor**/
-	} /**.
+    private Solution() {
+        /**. constructor**/
+    } /**.
     @param args of type string : command line args**/
-	public static void main(String[] args) {
-		Scanner s=new Scanner(System.in);      
+    public static void main(String[] args) {
+        Scanner s=new Scanner(System.in);      
         int base = s.nextInt();
         int exponent = s.nextInt();
         long result = power(base, exponent);
