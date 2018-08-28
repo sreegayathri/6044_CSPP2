@@ -3,7 +3,7 @@
         date : 27/08/18
 */
 import java.util.Scanner;
-
+/**. start of the class*/
 public final class Solution {
     /**.
     the class solution**/
