@@ -4,7 +4,7 @@
 */
 import java.util.Scanner;
 
-public class Solution {
+public final class Solution {
 	/**.
     the class solution**/
 	private Solution() {
@@ -19,7 +19,7 @@ public class Solution {
         System.out.println(result);
     }
     /**
-     * {recursion function for power}.
+     * function for power
      *
      * @param      base     {type int }.
      * @param      e     {type int}.
