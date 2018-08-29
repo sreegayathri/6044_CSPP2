@@ -9,23 +9,24 @@ public final class Solution {
     }
 /* Fill the main function to print the number of 7's between 1 to n*/
     public static void main(final String[] args) {
-        /**.
-        * main function of the program */
-        Scanner s = new Scanner(System.in);      
+        Scanner s = new Scanner(System.in);
         int n = s.nextInt();
         int count = 0;
+        int i;
+        int temp = 1;
         final int x = 10;
         final int y = 7;
-        for (int i = 1; i <= n; i++) {
-            int temp = i;
+        for (i = 0; i <= n; i++) {
+            temp = i;
             while (temp != 0) {
-                if (temp %  10 == 7) {
-                    count = count + 1;
+                if (temp % x == y) {
+                    count++;
                 }
-                temp = temp / 10;
+                temp = temp / x;
+
             }
+
         }
         System.out.println(count);
-
     }
 }
