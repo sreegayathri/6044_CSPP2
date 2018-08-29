@@ -16,9 +16,7 @@ public final class Solution {
 /* Fill the main function to print the number of 7's between 1 to n*/
     /**
     * @param n the given n numbers
-    * @param i initialization
-    * @param count number count of total 7s
-    * @param temp temporary variable*/
+    */
     public static void main(final String[] args) {
         Scanner s = new Scanner(System.in);
         int n = s.nextInt();
