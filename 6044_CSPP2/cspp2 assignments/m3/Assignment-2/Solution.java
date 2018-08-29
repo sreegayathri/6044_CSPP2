@@ -11,16 +11,16 @@ public final class Solution {
     public static void main(String[] args) {
         /**.
         * main function of the program */
-        Scanner s=new Scanner(System.in);      
+        Scanner s = new Scanner(System.in);      
         int n = s.nextInt();
         int count = 0;
-        for (int i=1;i<=n;i++) {
+        for (int i = 1; i <= n; i++) {
             int temp = i;
-            while (temp!=0){
+            while (temp != 0) {
                 if (temp%10 == 7) {
-                    count = count +1;
+                    count = count + 1;
                 }
-                temp=temp/10;
+                temp = temp / 10;
             }
         }
         System.out.println(count);
