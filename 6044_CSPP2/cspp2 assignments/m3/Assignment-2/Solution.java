@@ -15,9 +15,10 @@ public final class Solution {
     }
 /* Fill the main function to print the number of 7's between 1 to n*/
     /**
-    * @param n the given n numbers
-    */
+    * @param n the given n numbers */
     public static void main(final String[] args) {
+        /**.
+        * main functio of program*/
         Scanner s = new Scanner(System.in);
         int n = s.nextInt();
         int count = 0;
