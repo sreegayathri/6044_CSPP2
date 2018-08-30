@@ -1,4 +1,4 @@
-import java.util.*;
+import java.util.Scanner;
 /**.
 begin the class for the maximum number from given set of numbers*/
 public final class Solution {
