@@ -51,7 +51,7 @@ public final class Solution {
                 System.out.println();
                 }
             } else {
-                System.out.println("invalid");
+                System.out.println("not possible");
             }
     }
 }
