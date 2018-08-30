@@ -16,10 +16,11 @@ public final class Solution {
          */
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
-        int arr[] = new int[n];
+        int []arr = new int[n];
 
-        for(int i=0; i<n; i++)
+        for (int i = 0; i < n; i++) {
             arr[i] = sc.nextInt();
+        }
 
         //int max = getMax(arr);
         System.out.println(getMax(arr));
@@ -29,12 +30,12 @@ public final class Solution {
      * @param      inputArray  The input array
      * @return     The maximum.
      */
-    public static int getMax(int[] inputArray) {
+    public static int getMax(final int[] inputArray) {
         /**
          * { getmax function of the program }
          */
         int maxValue = inputArray[0];
-        for(int i = 1; i < inputArray.length; i++) {
+        for (int i = 1; i < inputArray.length; i++) {
             if (inputArray[i] > maxValue) {
                 maxValue = inputArray[i];
             }
