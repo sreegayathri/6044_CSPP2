@@ -10,6 +10,9 @@ public final class Solution {
          * { class constructor }
          */
     }
+    /**
+     * @param      args  The arguments
+     */
     public static void main(final String[] args) {
         /**.
          * { main function of the program }
