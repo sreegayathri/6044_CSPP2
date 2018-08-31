@@ -13,9 +13,14 @@ public final class Solution {
          * { item_description }
          */
     }
+    /**
+     * { function_description }
+     *
+     * @param      args  The arguments
+     */
     public static void main(final String[] args) {
         /**
-         * { var_description }
+         * { main function }
          */
         Scanner sc = new Scanner(System.in);
         String s = sc.nextLine();
