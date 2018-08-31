@@ -25,8 +25,8 @@ public final class Solution {
             sum = sum + numAti * Math.pow(2, (s.length() - 1) - i);
         }
         int temp = (int) sum;
-        String res = Integer.toString(temp);
-        return res;
+        String result = Integer.toString(temp);
+        return result;
     }
     /**.
      * { function_description }
@@ -42,8 +42,8 @@ public final class Solution {
         sc.nextLine();
         for (int i = 0; i < n; i++) {
             String s = sc.nextLine();
-            String res = binaryToDecimal(s);
-            System.out.println(res);
+            String result = binaryToDecimal(s);
+            System.out.println(result);
         }
     }
 
