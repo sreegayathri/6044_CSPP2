@@ -3,15 +3,27 @@
 
 
 import java.util.Scanner;
-public class Solution
-{/*
-	Do not modify the main function 
-	*/
-	public static void main(String[] args)
-	{
-		Scanner sc=new Scanner(System.in);
-		String s=sc.nextLine();
-		StringBuilder sb = new StringBuilder(s);
-		System.out.println(sb.reverse().toString());
-	}
+/**
+ * Class for solution.
+ */
+public class Solution {
+    /**
+     * { function_description }
+     *
+     * @param      args  The arguments
+     */
+    private Solution() {
+        /**
+         * { item_description }
+         */
+    }
+    public static void main(String[] args) {
+        /**
+         * { var_description }
+         */
+        Scanner sc = new Scanner(System.in);
+        String s = sc.nextLine();
+        StringBuilder sb = new StringBuilder(s);
+        System.out.println(sb.reverse().toString());
+    }
 }
