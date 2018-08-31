@@ -12,7 +12,6 @@ public class Solution
 		Scanner sc=new Scanner(System.in);
 		String s=sc.nextLine();
 		StringBuilder sb = new StringBuilder(s);
-		System.out.println("Reversed string is:");
 		System.out.println(sb.reverse().toString());
 	}
 }
