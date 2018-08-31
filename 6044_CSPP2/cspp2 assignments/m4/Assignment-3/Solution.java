@@ -3,6 +3,9 @@
 
 import java.util.Scanner;
 public final class Solution {
+    /**
+     * class of the program
+     */
     private Solution() {
         /**
          * { constructor }
