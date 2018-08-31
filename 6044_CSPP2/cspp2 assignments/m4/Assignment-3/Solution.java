@@ -15,7 +15,7 @@ public class Solution {
         for (int i = 0; i < s.length(); i++) {
             char c = s.charAt(i);
             int numAti = Character.getNumericValue(c);
-            sum = sum + numAti * Math.pow(2, (s.length() - 1) - i );
+            sum = sum + numAti * Math.pow(2, (s.length() - 1) - i);
         }
         int temp = (int) sum;
         String res = Integer.toString(temp);
