@@ -22,14 +22,19 @@ public class Solution {
         String res = Integer.toString(temp);
         return res;
     }
-    public static void main(String[] args) {
+    /**
+     * { function_description }
+     *
+     * @param      args  The arguments
+     */
+    public static void main(final String[] args) {
         /**
          * { var_description }
          */
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
         sc.nextLine();
-        for(int i = 0; i < n; i++) {
+        for (int i = 0; i < n; i++) {
             String s = sc.nextLine();
             String res = binaryToDecimal(s);
             System.out.println(res);
