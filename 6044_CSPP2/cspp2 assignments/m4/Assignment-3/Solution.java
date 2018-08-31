@@ -13,10 +13,10 @@ public class Solution {
          * { var_description }
          */
         double sum = 0;
-        for (int i = 0; i < s.length() ; i++) {
+        for (int i = 0; i < s.length(); i++) {
             char c = s.charAt(i);
             int numAti = Character.getNumericValue(c);
-            sum = sum + numAti * Math.pow(2,(s.length()-1)-i );
+            sum = sum + numAti * Math.pow(2, (s.length() - 1) - i );
         }
         int temp = (int) sum;
         String res = Integer.toString(temp);
