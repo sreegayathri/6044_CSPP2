@@ -3,8 +3,8 @@
 
 
 import java.util.Scanner;
-public class Solution
-{/*
+public class Solution {
+/**
     Do not modify this main function.
     */
     
@@ -26,12 +26,12 @@ public class Solution
         /**
          * { var_description }
          */
-        Scanner sc=new Scanner(System.in);
-        int n= sc.nextInt();
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
         sc.nextLine();
-        for(int i=0;i<n;i++) {
-            String s=sc.nextLine();
-            String res=binaryToDecimal(s);
+        for(int i = 0; i < n; i++) {
+            String s = sc.nextLine();
+            String res = binaryToDecimal(s);
             System.out.println(res);
         }
     }
