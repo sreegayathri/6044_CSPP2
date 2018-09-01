@@ -24,20 +24,19 @@ final class Solution {
      */
     static int[][] roundHundred(final int[][] a, final int rows, final int columns) {
 
-	// write ypur code here
-    Scanner scan = new Scanner(System.in);
-    for (int i=0; i < rows; i++) {
-        for (int j= 0 ; j < columns; j++) {
-            a[i][j] = scan.nextInt();
-            if (a[i][j] >= 50) {
-                a[i][j] = 0;
+	int[][] click = new int[rows][columns];
+    for (int i = 0; i<rows; i++) {
+        for (int j=0; j<columns; j++) {
+            int z = a[i][j] / N_VALUE;
+            if (a[i][j] > (z * N_VALUE) + N_VALUE) {
+                click[i][j] = (z + 1) * N_VALUE;
+            } else {
+                ;
             }
-            else {
-                a[i][j] = 100;
-            }
+
         }
     }
-	return a;
+	
     }
     /**
      * Main function.
