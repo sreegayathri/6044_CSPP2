@@ -38,16 +38,15 @@ public final class Solution {
     * @param args is the parameter for this method
     */
     public static void main(String[] args){
+    	/**
+    	 * main function
+    	 */
 
         Scanner scan = new Scanner(System.in);
-        int nber = scan.nextInt();
+        int n = scan.nextInt();
         comps = "";
-        boolean prime = oddComposites(nber);
-        if(prime){
-            System.out.println(nber+" is Prime");
-        }
-        else{
-            System.out.println(nber);
-        }
+        boolean prime = oddComposites(n);
+        System.out.println(n);
+    
     }
 }
