@@ -4,17 +4,17 @@ import java.util.*;
  */
 class InputValidator {
     /*Write the atrributes and methods for InputValidator*/
-    static String value;
+    static String word;
     public InputValidator(String input) {
-        this.value = input;
+        this.word = input;
     }
     /**
      * { function_description }
      *
-     * @return     { description_of_the_return_value }
+     * @return     { description_of_the_return_word }
      */
     public boolean validateData() {
-        if (value.length() >= 6) {
+        if (word.length() >= 6) {
             return true;
         } else {
             return false;
@@ -31,9 +31,9 @@ public class Solution
         /**
          * { var_description }
          */
-        Scanner s=new Scanner(System.in);
-        String input=s.next();
-        InputValidator i=new InputValidator(input);     
+        Scanner s = new Scanner(System.in);
+        String input = s.next();
+        InputValidator i = new InputValidator(input);     
         System.out.println(i.validateData());
 
     }
