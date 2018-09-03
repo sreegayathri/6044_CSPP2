@@ -5,6 +5,11 @@ import java.util.Scanner;
 class InputValidator {
     /*Write the atrributes and methods for InputValidator*/
     static String word;
+    /**
+     * Constructs the object.
+     *
+     * @param      input  The input
+     */
     public InputValidator(String input) {
         this.word = input;
     }
