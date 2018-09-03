@@ -33,9 +33,8 @@ class InputValidator {
         }
     }
 }
-public final class Solution
-{
-    /**
+public final class Solution {
+    /**.
      * { function_description }
      *
      * @param      args  The arguments
