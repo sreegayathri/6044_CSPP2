@@ -4,12 +4,12 @@ import java.util.Scanner;
  */
 class InputValidator {
     /*Write the atrributes and methods for InputValidator*/
-    /**
+    /**.
      * class inside
      */
-    private final int length = 6;
-    /**
-     * { magic 6 init }
+    private final int range = 6;
+    /**.
+     * { magic 6 init     }
      */
     private static String word;
     /**
@@ -26,7 +26,7 @@ class InputValidator {
      * @return     { description_of_the_return_word }
      */
     public boolean validateData() {
-        if (word.length() >= 6) {
+        if (word.length() >= range) {
             return true;
         } else {
             return false;
