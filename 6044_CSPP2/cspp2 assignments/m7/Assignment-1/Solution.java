@@ -33,6 +33,9 @@ class InputValidator {
         }
     }
 }
+/**
+ * class with main function
+ */
 public final class Solution {
     /**.
      * { function_description }
