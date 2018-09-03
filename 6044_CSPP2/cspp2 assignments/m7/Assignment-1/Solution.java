@@ -26,14 +26,13 @@ public class Solution
     /**
      * { item_description }
      */
-    public static void main(String args[])
-    {
+    public static void main(String[] args) {
         /**
          * { var_description }
          */
         Scanner s = new Scanner(System.in);
         String input = s.next();
-        InputValidator i = new InputValidator(input);     
+        InputValidator i = new InputValidator(input);
         System.out.println(i.validateData());
 
     }
