@@ -10,10 +10,10 @@ class InputValidator {
      *
      * @param      input  The input
      */
-    public InputValidator(String input) {
+    InputValidator(final String input) {
         this.word = input;
     }
-    /**
+    /**.
      * { function_description }
      *
      * @return     { description_of_the_return_word }
