@@ -28,16 +28,15 @@ class InputValidator {
     public boolean validateData() {
         if (word.length() >= range) {
             return true;
-        } else {
-            return false;
         }
+        return false;
     }
 }
 /**.
  * class with main function
  */
 public final class Solution {
-    /**
+    /**.
      * add'n class
      */
     private Solution() {
