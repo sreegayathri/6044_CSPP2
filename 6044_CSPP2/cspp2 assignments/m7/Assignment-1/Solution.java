@@ -33,10 +33,18 @@ class InputValidator {
         }
     }
 }
-/**
+/**.
  * class with main function
  */
 public final class Solution {
+    /**
+     * add'n class
+     */
+    private Solution() {
+/**
+ * Constructs the object.
+ */
+    }
     /**.
      * { function_description }
      *
