@@ -33,7 +33,7 @@ class InputValidator {
         }
     }
 }
-public class Solution
+public final class Solution
 {
     /**
      * { function_description }
@@ -42,7 +42,7 @@ public class Solution
      */
     public static void main(final String[] args) {
         /**
-         * { var_description }
+         * { main function }
          */
         Scanner s = new Scanner(System.in);
         String input = s.next();
