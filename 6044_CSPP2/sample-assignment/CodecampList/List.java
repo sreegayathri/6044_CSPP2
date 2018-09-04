@@ -129,6 +129,9 @@ public class List {
     public void remove(final int index) {
         // write the logic for remove here.
         // Think about what to do to the size variable.
+        if (index < 0 || index >= size) {
+            System.out.println("Invalid Position Exception");
+        }
         for (int i = index; i < (size - 1); i++) {
             ary[i] = ary[i + 1];
         }
