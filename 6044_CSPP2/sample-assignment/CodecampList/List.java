@@ -142,6 +142,8 @@ public class List {
  * @param      index  The index
  */
     public void remove(final int index) {
+/**
+ * { remove } */
         // write the logic for remove here.
         // Think about what to do to the size variable.
         if (index < 0 || index >= size) {
@@ -154,9 +156,7 @@ public class List {
         ary[size - 1] = 0;
         size--;
         }
-        
     }
-
     /*
      * Get method has to return the items that is
      * at the index position passed as an argument to the method.
@@ -168,7 +168,13 @@ public class List {
      * How do we check if the position is greater than the
      * number of items in the list? Would size variable be useful?
      */
+
     public int get(final int index) {
+/**
+ * get method
+ */
+
+
         // Replace the code below to write the code for get
         return ary[index];
     }
