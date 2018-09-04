@@ -132,11 +132,14 @@ public class List {
         if (index < 0 || index >= size) {
             System.out.println("Invalid Position Exception");
         }
-        for (int i = index; i < (size - 1); i++) {
+        else {
+            for (int i = index; i < (size - 1); i++) {
             ary[i] = ary[i + 1];
         }
         ary[size - 1] = 0;
         size--;
+        }
+        
     }
 
     /*
