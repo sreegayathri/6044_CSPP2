@@ -148,8 +148,7 @@ public class List {
         // Think about what to do to the size variable.
         if (index < 0 || index >= size) {
             System.out.println("Invalid Position Exception");
-        }
-        else {
+        } else {
             for (int i = index; i < (size - 1); i++) {
             ary[i] = ary[i + 1];
         }
