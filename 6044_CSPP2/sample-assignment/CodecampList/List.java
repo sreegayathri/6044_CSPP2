@@ -1,6 +1,6 @@
 import java.io.BufferedInputStream;
 import java.util.Scanner;
-import java.lang.Object;
+import java.util.Arrays;
 
 public class List {
     //Implement all the methods mentioned to build a ListADT
@@ -174,12 +174,17 @@ public class List {
      */
     public String toString() {
         // Replace the code below
-        String str = "[";
+        int[] ary2 = new int[size];
+        for (int i = 0; i < size; i++) {
+            ary2[i] = ary[i];
+        }
+        return (Arrays.toString(ary2).replace(" ", ""));
+        /*String str = "[";
         for (int i = 0; i < (size - 1); i++) {
             str = str + ary[i] + ",";
         }
         str = str + ary[size - 1] + "]";
-        return str;
+        return str;*/
     }
 
     /*
