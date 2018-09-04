@@ -46,7 +46,7 @@ public class List {
      * So, to keep track of the size we need a variable called size
      * Again, we use private as we don't want that size variable
      * to be accessed by the methods that are outside the List class.
-     * 
+     *
      */
 
     // declare a private int size
@@ -75,7 +75,7 @@ public class List {
         // That is the initial value to use for size.
 
     }
-    
+
     /*
      * The add method does what the name suggests.
      * Add an int item to the list.
@@ -87,7 +87,7 @@ public class List {
 
      * The method returns void (nothing)
      */
-    public void add(int item) {
+    public void add(final int item) {
         //Inserts the specified element at the end of the list.
         ary[size] = item;
         size++;
@@ -109,7 +109,7 @@ public class List {
      * The remove method does what the name suggests.
      * Removes an int item, specified by the index argument, from list
      * It also does an additional step.
-     * Think about what happens when 
+     * Think about what happens when
      * an item is removed from the middle of the list
      * It creates a hole in the list, right?
      * This would mean, all the items that are
@@ -125,10 +125,10 @@ public class List {
      * array = [1,3,0,0,0,0,0,0,0,0]
      * The method returns void (nothing)
      */
-    public void remove(int index) {
+    public void remove(final int index) {
         // write the logic for remove here.
         // Think about what to do to the size variable.
-        for (int i = index; i < (size -1); i++) {
+        for (int i = index; i < (size - 1); i++) {
             ary[i] = ary[i + 1];
         }
         ary[size - 1] = 0;
@@ -143,10 +143,10 @@ public class List {
      * How can an element not be there at a given position?
      * Well, if the position is greater than the number of items
      * in the list then that would mean the item doesn't exist.
-     * How do we check if the position is greater than the 
+     * How do we check if the position is greater than the
      * number of items in the list? Would size variable be useful?
      */
-    public int get(int index) {
+    public int get(final int index) {
         // Replace the code below to write the code for get
         return ary[index];
     }
@@ -179,19 +179,20 @@ public class List {
         }
         str = str + ary[size - 1] + "]";
         return str;
-    } 
-    
+    }
+
     /*
      * Contains return true if the list has
      * the item passed as an argument to the method
      * So, iterate through the list and return true if
      * the item exists and otherwise false
      */
-    public boolean contains(int item) {
+    public boolean contains(final int item) {
         // Replace the code below
         for (int element : ary) {
-            if (element == item);
+            if (element == item) {
                 return true;
+            }
         }
         return false;
     }
@@ -204,11 +205,11 @@ public class List {
     public int indexOf(int item) {
         // Replace the code below
         for (int i = 0; i <= (ary.length - 1); i++) {
-            if (ary[i] == item){
+            if (ary[i] == item) {
                 return i;
             }
         }
-        return -1; 
+        return -1;
     }
 
     public static void main(String[] args) {
