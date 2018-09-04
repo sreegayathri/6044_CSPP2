@@ -63,7 +63,7 @@ public class List {
      */
     private int[] ary;
     private int size;
-    private int h = 10;
+    private final int h = 10;
     public List() {
         /**
          * constructor of class
