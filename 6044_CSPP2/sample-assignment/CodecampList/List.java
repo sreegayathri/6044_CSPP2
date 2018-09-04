@@ -62,7 +62,13 @@ public class List {
      * class variables with some default values.
      */
     private int[] ary;
+    /**
+     * { var_description }
+     */
     private int size;
+    /**
+     * { var_description }
+     */
     private final int h = 10;
     /**
      * Constructs the object.
