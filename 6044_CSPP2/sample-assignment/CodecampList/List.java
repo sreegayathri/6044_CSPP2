@@ -63,11 +63,12 @@ public class List {
      */
     private int[] ary;
     private int size;
+    private int h = 10;
     public List() {
         /**
          * constructor of class
          */
-        this.ary = new int[10];
+        this.ary = new int[h];
         this.size = 0;
         // what are the two variables to be initialized here?
         // think about the private variables described above.
