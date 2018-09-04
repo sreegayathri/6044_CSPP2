@@ -63,9 +63,6 @@ public class List {
      */
     private int[] ary;
     private int size;
-/**
- * Constructs the object.
- */
     public List() {
         /**
          * constructor of class
