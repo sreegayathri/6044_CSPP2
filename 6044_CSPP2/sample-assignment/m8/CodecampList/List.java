@@ -69,6 +69,9 @@ public class List {
      * { var_description }
      */
     private int size;
+    /**
+     * { var_description }
+     */
     private final int h = 10;
     /**
      * Constructs the object.
