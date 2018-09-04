@@ -1,9 +1,7 @@
 import java.io.BufferedInputStream;
 import java.util.Scanner;
 import java.util.Arrays;
-/**
- * List.
- */
+
 public class List {
     /**
      * class of list
