@@ -89,7 +89,7 @@ public class List {
      * Think about how you can use the size variable to add item
      * to the list.
      * The method returns void (nothing)*/
-    /**
+    /**.
      * add method
      * @param      item  The item
      */
@@ -105,7 +105,7 @@ public class List {
      * The purpose of the method is to announce the size of the list
      * to the objects outside the list
      * The method returns an int. Empty list should return 0.*/
-    /**
+    /**.
      * size
      *
      * @return     { description_of_the_return_value }
@@ -137,7 +137,7 @@ public class List {
      * array = [1,3,0,0,0,0,0,0,0,0]
      * The method returns void (nothing)
      */
-/**
+/**.
  * void remove
  *
  * @param      index  The index
@@ -168,7 +168,10 @@ public class List {
      * How do we check if the position is greater than the
      * number of items in the list? Would size variable be useful?
      */
-
+/**
+  * @param      index  The index
+  * @return     { description_of_the_return_value }
+ */
     public int get(final int index) {
 /**
  * get method
@@ -197,9 +200,14 @@ public class List {
      * Example: [1,2,3,0,0,0,0,0,0,0]
      * toString should only return the items in the list and
      * not all the elements of the array.
-     *
      */
+/**
+ * @return     String representation of the object.
+ */
     public String toString() {
+/**
+ * toString method
+ */
         // Replace the code below
         int[] ary2 = new int[size];
         for (int i = 0; i < size; i++) {
@@ -218,10 +226,16 @@ public class List {
      * Contains return true if the list has
      * the item passed as an argument to the method
      * So, iterate through the list and return true if
-     * the item exists and otherwise false
-     */
+     * the item exists and otherwise false*/
+/**
+ * @param      item  The item
+ * @return     { description_of_the_return_value }
+ */
     public boolean contains(final int item) {
-        // Replace the code below
+/**
+ * { contains }
+ */
+// Replace the code below
         for (int element : ary) {
             if (element == item) {
                 return true;
@@ -230,13 +244,19 @@ public class List {
         return false;
     }
 
-    /*
-     * Returns the index of the first occurrence
+    /* Returns the index of the first occurrence
      * of the specified element in this list,
-     * or -1 if this list does not contain the element.
-     */
+     * or -1 if this list does not contain the element.*/
+/**
+ 
+ * @param      item  The item
+ * @return     { description_of_the_return_value }
+ */
     public int indexOf(final int item) {
-        // Replace the code below
+/**
+ * { item_description }
+ */
+// Replace the code below
         for (int i = 0; i <= (ary.length - 1); i++) {
             if (ary[i] == item) {
                 return i;
@@ -244,9 +264,14 @@ public class List {
         }
         return -1;
     }
-
+/**
+ * @param      args  The arguments
+ */
     public static void main(final String[] args) {
-        // create an object of the list to invoke methods on it
+/**
+ * main
+ */
+// create an object of the list to invoke methods on it
         List l = new List();
         // code to read the test cases input file
         Scanner stdin = new Scanner(new BufferedInputStream(System.in));
