@@ -129,7 +129,7 @@ public class List {
         // write the logic for remove here.
         // Think about what to do to the size variable.
         for (int i = index; i < (size -1); i++) {
-            ary[i] = ary[i+1];
+            ary[i] = ary[i + 1];
         }
         ary[size - 1] = 0;
         size--;
@@ -174,10 +174,10 @@ public class List {
     public String toString() {
         // Replace the code below
         String str = "[";
-        for (int i = 0; i < size - 1; i++) {
+        for (int i = 0; i < (size - 1); i++) {
             str = str + ary[i] + ",";
         }
-        str = str + ary[size -1] + "]";
+        str = str + ary[size - 1] + "]";
         return str;
     } 
     
@@ -189,7 +189,7 @@ public class List {
      */
     public boolean contains(int item) {
         // Replace the code below
-        for (int element: ary) {
+        for (int element : ary) {
             if (element == item);
                 return true;
         }
@@ -203,7 +203,7 @@ public class List {
      */
     public int indexOf(int item) {
         // Replace the code below
-        for (int i=0; i <= ary.length-1; i++) {
+        for (int i = 0; i <= (ary.length - 1); i++) {
             if (ary[i] == item){
                 return i;
             }
