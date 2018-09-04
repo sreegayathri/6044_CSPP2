@@ -61,14 +61,14 @@ public class List {
      * The purpose of the constructor is to initialize the
      * class variables with some default values.
      */
+    /**.
+     * { var_description }
+     */
     private int[] ary;
-    /**
+    /**.
      * { var_description }
      */
     private int size;
-    /**
-     * { var_description }
-     */
     private final int h = 10;
     /**
      * Constructs the object.
