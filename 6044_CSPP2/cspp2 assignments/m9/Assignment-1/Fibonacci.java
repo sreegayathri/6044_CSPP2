@@ -16,7 +16,7 @@ import java.util.Scanner;
  * by invoking the add method provided in the List ADT.
  *
  */
-/**
+/**.
  * { item_description }
  */
 public final class Fibonacci {
@@ -51,7 +51,7 @@ public final class Fibonacci {
         }
         return fibo;
     }
-/**
+/**.
  * { function_description }
  *
  * @param      args  The arguments
