@@ -17,6 +17,7 @@ public class List {
 /**
  * { item_description }
  */
+    private int[] list;
     //Implement all the methods mentioned to build a ListADT
     /*
      * The goal for the list is to store items.
@@ -40,10 +41,6 @@ public class List {
      // declare a private int[]
     // don't create the array yet using new
     // that's the job of the List constructor
-    /**.
-        array
-    */
-    private int[] list;
     /*
      * What are the other class variables needed for creating a list?
      * How about keeping track of the size of the list?
