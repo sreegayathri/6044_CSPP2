@@ -212,7 +212,7 @@ public class List {
     public void remove(final int index) {
         // write the logic for remove here.
         // Think about what to do to the size variable.
-        if(index >= 0 && index < size) {
+        if (index >= 0 && index < size) {
             for(int i = index; i < size - 1; i++) {
                 list[i] = list[i + 1];
             }
@@ -239,7 +239,7 @@ public class List {
  */
 
     public int get(final int index) {
-        if(index < 0 || index >= size) {
+        if (index < 0 || index >= size) {
             return -1;
         } else {
             return list[index];
@@ -270,7 +270,7 @@ public class List {
  * @return     String representation of the object.
  */
     public String toString() {
-        if(size == 0) {
+        if (size == 0) {
             return "[]";
         }
         String str = "[";
@@ -328,26 +328,26 @@ public class List {
     by moving all the elements to the right.
         The method returns void (nothing)
      */
-    public void add(int index,int item) {
+    public void add(final int index, final int item) {
          // write the logic
         if (index < 0) {
             System.out.println("Negative Index Exception");
         } else {
             for (int i = size; i > index; i--) {
                 list[i] = list[i - 1];
-                list[index] = item;
-                size++;
             }
+            list[index] = item;
+                size++;
          }
     }
     
     /* Returns the count of occurances of a given item in the list*/
-    public int count(int item)
+    public int count(final int item)
     {
          // write the logic 
         int count = 0;
-        for (int i = size; i < size; i++) {
-            if (list[i] == 2*item) {
+        for (int i = 0; i < size; i++) {
+            if (list[i] == item) {
                 count += 1;
             }
         }
@@ -371,52 +371,53 @@ public class List {
             switch (tokens[0]) {
                case "add":
                 if((tokens.length)==2){
-                String[] t = tokens[1].split(",");
-                if(t.length==1){
-                    l.add(Integer.parseInt(tokens[1]));
-                }
-                else{
-                    if(t.length>1)
-                        l.add(Integer.parseInt(t[0]),Integer.parseInt(t[1]));
+                    String[] t = tokens[1].split(",");
+                    if(t.length==1){
+                        l.add(Integer.parseInt(tokens[1]));
+                    } else {
+                        if(t.length>1) {
+                            l.add(Integer.parseInt(t[0]),Integer.parseInt(t[1]));
+                        }
                     }
                 }
                 break;
                 case "count":
-                System.out.println(l.count(Integer.parseInt(tokens[1])));
-                break;
+                    System.out.println(l.count(Integer.parseInt(tokens[1])));
+                    break;
                 case "addAll":
-                if(tokens.length==2){
-                String[] t1 = tokens[1].split(",");
-                int temp[]=new int[t1.length];
-                for(int i=0;i<temp.length;i++)
-                    temp[i]=Integer.parseInt(t1[i]);
-                l.addAll(temp);
-                }
-                break;
+                    if(tokens.length==2) {
+                        String[] t1 = tokens[1].split(",");
+                        int temp[]=new int[t1.length];
+                        for(int i=0;i<temp.length;i++) {
+                            temp[i]=Integer.parseInt(t1[i]);
+                        }
+                        l.addAll(temp);
+                    }
+                    break;
                 case "size":
                 // invoke size method and print the list size
                 // BTW, list size is not the array size
                 // it is the number of items in the list
-                System.out.println(l.size());
-                break;
+                    System.out.println(l.size());
+                    break;
                 case "print":
                 // print the list (implement toString for this to work)
                 // expected format is [item-1,item-2,...,item-n]
                 // review the output testcase file
-                System.out.println(l);
-                break;
+                    System.out.println(l);
+                    break;
                 case "remove":
-                l.remove(Integer.parseInt(tokens[1]));
-                break;
+                    l.remove(Integer.parseInt(tokens[1]));
+                    break;
                 case "indexOf":
-                System.out.println(l.indexOf(Integer.parseInt(tokens[1])));
-                break;
+                    System.out.println(l.indexOf(Integer.parseInt(tokens[1])));
+                    break;
                 case "get":
-                System.out.println(l.get(Integer.parseInt(tokens[1])));
-                break;
+                    System.out.println(l.get(Integer.parseInt(tokens[1])));
+                    break;
                 case "contains":
-                System.out.println(l.contains(Integer.parseInt(tokens[1])));
-                break;
+                    System.out.println(l.contains(Integer.parseInt(tokens[1])));
+                    break;
             }
         }
     }
