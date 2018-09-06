@@ -1,10 +1,14 @@
 import java.io.BufferedInputStream;
 import java.util.Scanner;
 import java.util.Arrays;
-
+/**
+ * List of .
+ */
 public class List {
+/**
+ * { item_description }
+ */
     //Implement all the methods mentioned to build a ListADT
-
     /*
      * The goal for the list is to store items.
      * How are we going to store the items in the list?
@@ -26,12 +30,10 @@ public class List {
      * This is a hard concept to understand. Discuss with your mentor.
      *
     */
-    
-    // declare a private int[]
+     // declare a private int[]
     // don't create the array yet using new
     // that's the job of the List constructor
     private int[] list;
-
     /*
      * What are the other class variables needed for creating a list?
      * How about keeping track of the size of the list?
@@ -56,22 +58,24 @@ public class List {
     // again, don't initialize it here
     // variable initialization should be done in the constructor
     private int size;
-
+    private static final int h = 10;
     /*
      * The purpose of the constructor is to initialize the
      * class variables with some default values.
      */
-    
-    
-
+/**
+ * Constructs the object.
+ */
     public List() {
-
+/**
+ * { item_description }
+ */
         // what are the two variables to be initialized here?
         // think about the private variables described above.
         // What should be the default values?
         // In the case of the list, it should be empty but
         // it should be initialized with an array size like 10
-        list = new int[10];
+        list = new int[h];
 
         // Think about the initial value for size.
         // How many items do we have in the list when you create it?
@@ -94,6 +98,11 @@ public class List {
      * constructor.
      * 
      */
+/**
+ * Constructs the object.
+ *
+ * @param      capacity  The capacity
+ */
     public List(int capacity) {
         size = 0;
         list = new int[capacity];
@@ -110,17 +119,19 @@ public class List {
      * 
      * The method returns void (nothing)
      */
+/**
+ * { function_description }
+ *
+ * @param      item  The item
+ */
     public void add(int item) {
-        //Inserts the specified element at the end of the zelist.
-        
+        //Inserts the specified element at the end of the list.
+        if (size == list.length) {
+            resize();
+        }
         list[size++] = item;   
     }
-/*
-    public void add(int[] arr) {
-        for (int i = 0; i < arr.length; i++) {
-            list = add.arr[i];
-        }
-    }*/
+
     /*
      *
      * Resize the list
@@ -153,7 +164,10 @@ public class List {
      */
 
     // todo create resize method
-
+    
+    private void resize() {
+        list = Arrays.copyOf(list, size * 2);
+    }    
     /*
      * The size method returns the value of the size.
      * The purpose of the method is to announce the size of the list
@@ -161,6 +175,11 @@ public class List {
      * 
      * The method returns an int. Empty list should return 0.
      */
+/**
+ * { function_description }
+ *
+ * @return   int  { description_of_the_return_value }
+ */
     public int size() {
         return size;
     }
@@ -185,21 +204,15 @@ public class List {
      * array = [1,3,0,0,0,0,0,0,0,0]
      * The method returns void (nothing)
      */
-
-    public void remove(int index) {
+/**
+ * { function_description }
+ *
+ * @param      index  The index
+ */
+    public void remove(final int index) {
         // write the logic for remove here.
         // Think about what to do to the size variable.
-        if (index >= 0 && index < size) {
-            System.out.println("Invalid Position Exception");
-        } else {
-            for (int i = index; i < (size - 1); i++) {
-            list[i] = list[i + 1];
-        }
-        list[size - 1] = 0;
-        size--;
-        }
-    }
-    /*    if(index >= 0 && index < size) {
+        if(index >= 0 && index < size) {
             for(int i = index; i < size - 1; i++) {
                 list[i] = list[i + 1];
             }
@@ -207,7 +220,7 @@ public class List {
         } else {
             System.out.println("Invalid Position Exception");
         }
-    }*/
+    }
 
     /*
      * Get method has to return the items that is
@@ -220,7 +233,12 @@ public class List {
      * How do we check if the position is greater than the 
      * number of items in the list? Would size variable be useful?
      */
-    public int get(int index) {
+/**
+ * @param      index  The index
+ * @return     { description_of_the_return_value }
+ */
+
+    public int get(final int index) {
         if(index < 0 || index >= size) {
             return -1;
         } else {
@@ -248,9 +266,13 @@ public class List {
      * not all the elements of the array.
      *
      */
+/**
+ * @return     String representation of the object.
+ */
     public String toString() {
-        if(size == 0)
-            return "";
+        if(size == 0) {
+            return "[]";
+        }
         String str = "[";
         int i = 0;
         for(i = 0; i < size - 1; i++) {
@@ -266,7 +288,11 @@ public class List {
      * So, iterate through the list and return true if
      * the item exists and otherwise false
      */
-    public boolean contains(int item) {
+/**
+ * @param      item  The item
+ * @return   bool  { description_of_the_return_value }
+ */
+    public boolean contains( final int item) {
         return indexOf(item) == -1;
     }
 
@@ -275,13 +301,18 @@ public class List {
      * of the specified element in this list,
      * or -1 if this list does not contain the element.
      */
-    public int indexOf(int item) {
+/**
+ * @param      item  The item
+ * @return     { description_of_the_return_value }
+ */
+    public int indexOf(final int item) {
         for(int i = 0; i < size; i++) {
             if(item == list[i])
                 return i;
         }
         return -1;
     }
+
    /*Inserts all the elements of specified int 
     array to the end of list*/
     public void addAll(int items[])
