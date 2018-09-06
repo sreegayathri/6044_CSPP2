@@ -324,14 +324,13 @@ public class List {
      * Adds all.
      * @param      items  The items
      */
-    public void addAll(int items[])
-    {
+    public void addAll(final int[] items) {
         // write the logic
         for (int i = 0; i < items.length; i++) {
             add(items[i]);
         }
     }
-     /* 
+     /*
         Inserts the specified element at the specified index
     by moving all the elements to the right.
         The method returns void (nothing)
@@ -360,9 +359,8 @@ public class List {
      *
      * @return     { description_of_the_return_value }
      */
-    public int count(final int item)
-    {
-         // write the logic 
+    public int count(final int item) {
+         // write the logic
         int count = 0;
         for (int i = 0; i < size; i++) {
             if (list[i] == item) {
@@ -374,7 +372,7 @@ public class List {
     /**.
      * @param      args  The arguments
      */
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         // create an object of the list to invoke methods on it
         List l = new List();
         // code to read the test cases input file
@@ -394,7 +392,8 @@ public class List {
                         l.add(Integer.parseInt(tokens[1]));
                     } else {
                         if (t.length > 1) {
-                            l.add(Integer.parseInt(t[0]),Integer.parseInt(t[1]));
+                            l.add(Integer.parseInt(t[0]),
+                                Integer.parseInt(t[1]));
                         }
                     }
                 }
@@ -405,7 +404,7 @@ public class List {
                 case "addAll":
                     if (tokens.length == 2) {
                         String[] t1 = tokens[1].split(",");
-                        int temp[] = new int[t1.length];
+                        int[] temp = new int[t1.length];
                         for (int i = 0; i < temp.length; i++) {
                             temp[i] = Integer.parseInt(t1[i]);
                         }
@@ -435,6 +434,8 @@ public class List {
                     break;
                 case "contains":
                     System.out.println(l.contains(Integer.parseInt(tokens[1])));
+                    break;
+                default:
                     break;
             }
         }
