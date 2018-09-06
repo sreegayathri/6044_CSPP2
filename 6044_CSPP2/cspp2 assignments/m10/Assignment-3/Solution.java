@@ -9,7 +9,7 @@ class Student {
     protected Student(final String name1) {
         this.name = name1;
     } //A constructor used to initialize the instance variables
-/**. { get method } */
+/** @return { get method } */
     public String getName() {
         return this.name;
     } //Getter method which returns the value of instance variable
@@ -30,6 +30,9 @@ class Student {
     public int hashCode() {
         return this.hashCode();
     }
+/**
+ * @return  list.
+ */
     public String toString() {
         return this.name;
     }
