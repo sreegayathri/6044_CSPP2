@@ -40,7 +40,7 @@ class Student {
 /**
  * Class for solution.
  */
-public final class Solution {
+final class Solution {
 /**
  * @param      args  The arguments */
     public static void main(String[] args) {
