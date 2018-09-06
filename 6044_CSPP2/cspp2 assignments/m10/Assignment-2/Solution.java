@@ -1,8 +1,14 @@
-
+/**.
+ * { item_description }
+ */
 import java.io.BufferedInputStream;
-
+/**.
+ * { item_description }
+ */
 import java.util.Scanner;
-
+/**.
+ * Class for solution.
+ */
 public final class Solution {
     /**.
      * Constructs the object.
