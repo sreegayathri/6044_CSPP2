@@ -5,8 +5,8 @@ import java.util.Scanner;
 class Student {
     private String name;
     
-    protected Student(String name1) {
-        this.name = name1;
+    public Student(String name) {
+        this.name = name;
     }//A constructor used to initialize the instance variables
 
     public String getName() {
@@ -18,11 +18,15 @@ class Student {
         if (!(other instanceof Student)) {
             return false;
         }//This method is to check if two students names are equal or not
-
+        if (other == this) {
+            return true;
+        }
         Student that = (Student) other;
         return this.getName().equals(that.getName());
     }
-
+    public int hashCode() {
+        return this.hashCode();
+    }
     public String toString() {
         return this.name;
     }
