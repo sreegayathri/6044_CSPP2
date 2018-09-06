@@ -161,21 +161,21 @@ public class List {
      * Resize should create an new array that is
      * double the size of the old array.
      * Then copy the contents of the old array to the new one.
-     * 
+
      * When should the resize method be invoked and from where?
      * Will the client invoke resize or is it internal to List class?
      * Should the resize be public method or private?
      * Should the resize method return any values?
-     * You know enough of Object Oriented Programming to answer these questions :-)
+     * Object Oriented Programming to answer these questions
     // todo create resize method
     /*
      * The size method returns the value of the size.
      * The purpose of the method is to announce the size of the list
      * to the objects outside the list
-     * 
+
      * The method returns an int. Empty list should return 0.
      */
-/**
+/**.
  * { function_description }
  *
  * @return   int  { description_of_the_return_value }
@@ -183,7 +183,7 @@ public class List {
     public int size() {
         return size;
     }
-/**
+/**.
  * resize
  */
     private void resize() {
@@ -209,7 +209,7 @@ public class List {
      * array = [1,3,0,0,0,0,0,0,0,0]
      * The method returns void (nothing)
      */
-/**
+/**.
  * { function_description }
  *
  * @param      index  The index
@@ -218,7 +218,7 @@ public class List {
         // write the logic for remove here.
         // Think about what to do to the size variable.
         if (index >= 0 && index < size) {
-            for(int i = index; i < size - 1; i++) {
+            for (int i = index; i < size - 1; i++) {
                 list[i] = list[i + 1];
             }
             size--;
@@ -235,7 +235,7 @@ public class List {
      * How can an element not be there at a given position?
      * Well, if the position is greater than the number of items
      * in the list then that would mean the item doesn't exist.
-     * How do we check if the position is greater than the 
+     * How do we check if the position is greater than the
      * number of items in the list? Would size variable be useful?
      */
 /**
@@ -278,7 +278,7 @@ public class List {
         }
         String str = "[";
         int i = 0;
-        for(i = 0; i < size - 1; i++) {
+        for (i = 0; i < size - 1; i++) {
             str = str + list[i] + ",";
         }
         str = str + list[i] + "]";
@@ -297,7 +297,7 @@ public class List {
  * @param      item  The item
  * @return   bool  { description_of_the_return_value }
  */
-    public boolean contains( final int item) {
+    public boolean contains(final int item) {
         return indexOf(item) == -1;
     }
 
@@ -311,9 +311,10 @@ public class List {
  * @return     { description_of_the_return_value }
  */
     public int indexOf(final int item) {
-        for(int i = 0; i < size; i++) {
-            if(item == list[i])
+        for (int i = 0; i < size; i++) {
+            if (item == list[i]) {
                 return i;
+            }
         }
         return -1;
     }
