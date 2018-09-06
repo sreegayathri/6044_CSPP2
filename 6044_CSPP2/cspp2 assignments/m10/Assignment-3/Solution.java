@@ -3,8 +3,12 @@ import java.util.Scanner;
 //A Class is implemented for Student details
 /** Class for student.*/
 class Student {
+    /**
+     * { var_description }
+     */
     private String name;
-
+/** Constructs the object.
+ * @param      name  The name. */
     public Student(String name) {
         this.name = name;
     }//A constructor used to initialize the instance variables
