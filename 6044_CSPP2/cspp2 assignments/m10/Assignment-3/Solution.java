@@ -1,11 +1,8 @@
 import java.io.BufferedInputStream;
 import java.util.Scanner;
-//A Class is implemented for Student details
 /** Class for student.*/
 class Student {
-    /**
-     * { var_description }
-     */
+    /** { var_description } */
     private String name;
 /** Constructs the object.
  * @param      name  The name. */
