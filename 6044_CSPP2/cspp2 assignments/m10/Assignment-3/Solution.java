@@ -5,26 +5,28 @@ class Student {
     /**. { var_description } */
     private String name;
 /** Constructs the object.
- * @param      name  The name. */
+ * @param      name1  The name. */
     protected Student(final String name1) {
         this.name = name1;
-    }//A constructor used to initialize the instance variables
-
+    } //A constructor used to initialize the instance variables
+/**. { get method } */
     public String getName() {
         return this.name;
-    }//Getter method which returns the value of instance variable
+    } //Getter method which returns the value of instance variable
 
     @Override
-    public boolean equals(Object other) {
+    public boolean equals(final Object other) {
         if (!(other instanceof Student)) {
             return false;
-        }//This method is to check if two students names are equal or not
+        } //This method is to check if two students names are equal or not
         if (other == this) {
             return true;
         }
         Student that = (Student) other;
         return this.getName().equals(that.getName());
     }
+    /** @return     { for equals }
+     */
     public int hashCode() {
         return this.hashCode();
     }
