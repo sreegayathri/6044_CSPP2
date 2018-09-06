@@ -6,8 +6,8 @@ class Student {
     private String name;
 /** Constructs the object.
  * @param      name  The name. */
-    protected Student(String name) {
-        this.name = name;
+    protected Student(final String name1) {
+        this.name = name1;
     }//A constructor used to initialize the instance variables
 
     public String getName() {
