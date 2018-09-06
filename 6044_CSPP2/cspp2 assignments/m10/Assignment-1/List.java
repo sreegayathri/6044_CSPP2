@@ -14,7 +14,7 @@ import java.util.Arrays;
  * List of .
  */
 public class List {
-/**
+/**.
  * { item_description }
  */
     private int[] list;
@@ -126,7 +126,7 @@ public class List {
      * to the list.
      * The method returns void (nothing)
      */
-/**
+/**.
  * { function_description }
  *
  * @param      item  The item
@@ -136,7 +136,7 @@ public class List {
         if (size == list.length) {
             resize();
         }
-        list[size++] = item;   
+        list[size++] = item;
     }
     /*
      *
@@ -151,13 +151,14 @@ public class List {
      * Create a new array of the desired size,
      * and copy the contents from the original array to the new array,
      * using java.lang.System.arraycopy(...);
-     * 
+
      * Option 2
      * Use java.util.Arrays.copyOf(...) methods which returns a bigger array,
      * with the contents of the original array.
      *
      * TODO
-     * Create a method called resize(). Resize should create an new array that is
+     * Create a method called resize().
+     * Resize should create an new array that is
      * double the size of the old array.
      * Then copy the contents of the old array to the new one.
      * 
