@@ -2,11 +2,11 @@ import java.io.BufferedInputStream;
 import java.util.Scanner;
 /** Class for student.*/
 class Student {
-    /** { var_description } */
+    /**. { var_description } */
     private String name;
 /** Constructs the object.
  * @param      name  The name. */
-    public Student(String name) {
+    protected Student(String name) {
         this.name = name;
     }//A constructor used to initialize the instance variables
 
