@@ -9,7 +9,7 @@ interface StringListInterface {
      public boolean contains(String item);
      public int indexOf(String item);
 }
-//Write a StringList class which implements StringListInterface 
+//Write a StringList class which implements StringListInterface
 
 public class StringList implements StringListInterface {
     //Implement all the methods mentioned to build a ListADT
@@ -59,7 +59,7 @@ public class StringList implements StringListInterface {
      * So, to keep track of the size we need a variable called size
      * Again, we use private as we don't want that size variable
      * to be accessed by the methods that are outside of the List class.
-     * 
+     *
      */
 
     // declare a private int size
@@ -101,7 +101,7 @@ public class StringList implements StringListInterface {
      * The overloaded constructor is a way to initialize a list with
      * a list capacity of n items where n is given as an argument to
      * constructor.
-     * 
+     *
      */
 
     // todo - add an overloaded constructor here
@@ -123,12 +123,14 @@ public class StringList implements StringListInterface {
         //Inserts the specified element at the end of the list.
        if (size == strlist.length) {
             resize();
+            strlist[size++] = item;
+        } else {
+            strlist[size++] = item;
         }
-        strlist[size++] = item;
+
     }
     /*Inserts all the elements of specified int 
     array to the end of list*/
-   
     public void addAll(String[] items) {
         for (int i = 0; i < items.length; i++) {
             add(items[i]);
@@ -138,7 +140,7 @@ public class StringList implements StringListInterface {
      * The size method returns the value of the size.
      * The purpose of the method is to announce the size of the list
      * to the objects outside the list
-     * 
+     *
      * The method returns an int. Empty list should return 0.
      */
     public int size() {
@@ -172,7 +174,7 @@ public class StringList implements StringListInterface {
     public void remove(int index) {
         // write the logic for remove here.
         // Think about what to do to the size variable.
-       if(index >= 0 && index <= size) {
+       if(index >= 0 && index < size) {
             for(int i = index; i < size - 1; i++) {
                 strlist[i] = strlist[i + 1];
             }
@@ -240,7 +242,7 @@ public class StringList implements StringListInterface {
      * the item exists and otherwise false
      */
     public boolean contains(String item) {
-        return indexOf(item) == -1;
+        return indexOf(item) != -1;
     }
 
     /*
@@ -250,8 +252,9 @@ public class StringList implements StringListInterface {
      */
     public int indexOf(String item) {
         for(int i = 0; i < size; i++) {
-            if(item == strlist[i])
+            if(item.equals(strlist[i])) {
                 return i;
+            }
         }
         return -1;
     }
