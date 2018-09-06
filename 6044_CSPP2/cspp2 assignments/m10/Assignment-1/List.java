@@ -50,10 +50,7 @@ public class List {
      * currently it has 3 items.
      * So, to keep track of the size we need a variable called size
      * Again, we use private as we don't want that size variable
-     * to be accessed by the methods that are outside of the List class.
-     * 
-     */
-
+     * to be accessed by the methods that are outside of the List class...*/
     // declare a private int size
     // again, don't initialize it here
     // variable initialization should be done in the constructor
@@ -279,6 +276,9 @@ public class List {
             str = str + list[i] + ",";
         }
         str = str + list[i] + "]";
+        if (list[0] == 0) {
+            System.out.println("\n Invalid Position Exception");
+        }
         return str;
     }
     
