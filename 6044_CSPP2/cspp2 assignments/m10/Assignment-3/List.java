@@ -88,12 +88,13 @@ public class List<E> {
     public void remove(int index) {
         //Write logic for remove method
 		if(index >= 0 && index < size) {
-			System.out.println("Invalid Position Exception");
-        	for(int i = size; i > index; i++) {
+			for(int i = size; i > index; i++) {
             	list[i] = list[i + 1];
+            }
        		list[size] = null;
        		size--;
-       		}
+        } else {
+            System.out.println("Invalid Position Exception");
         }
     }
     /*
@@ -167,8 +168,9 @@ public class List<E> {
     public int indexOf(E item) {
        //Write logic for indexOf method
         for(int i = 0; i < size; i++) {
-            if(item == list[i])
+            if(item.equals(list[i])) {
                 return i;
+            }
         }
         return -1;
     }
