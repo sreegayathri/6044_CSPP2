@@ -5,8 +5,8 @@ import java.util.Scanner;
 class Student {
     private String name;
     
-    protected Student(String name) {
-        this.name = name;
+    protected Student(String name1) {
+        this.name = name1;
     }//A constructor used to initialize the instance variables
 
     public String getName() {
