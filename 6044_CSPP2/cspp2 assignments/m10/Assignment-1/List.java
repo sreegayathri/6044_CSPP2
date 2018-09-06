@@ -1,5 +1,14 @@
+/**.
+ * { item_description }
+ */
 import java.io.BufferedInputStream;
+/**.
+ * { item_description }
+ */
 import java.util.Scanner;
+/**.
+ * { item_description }
+ */
 import java.util.Arrays;
 /**
  * List of .
@@ -28,11 +37,12 @@ public class List {
      * This is not desirable and so having private access specifer
      * will protect the array such corruption.
      * This is a hard concept to understand. Discuss with your mentor.
-     *
-    */
      // declare a private int[]
     // don't create the array yet using new
     // that's the job of the List constructor
+    /**.
+        array
+    */
     private int[] list;
     /*
      * What are the other class variables needed for creating a list?
@@ -54,8 +64,14 @@ public class List {
     // declare a private int size
     // again, don't initialize it here
     // variable initialization should be done in the constructor
+    /**.
+    size
+    */
     private int size;
-    private static final int h = 10;
+    /**.
+     * Constructs the object.
+     */
+    private static final int H = 10;
     /*
      * The purpose of the constructor is to initialize the
      * class variables with some default values.
@@ -72,7 +88,7 @@ public class List {
         // What should be the default values?
         // In the case of the list, it should be empty but
         // it should be initialized with an array size like 10
-        list = new int[h];
+        list = new int[H];
 
         // Think about the initial value for size.
         // How many items do we have in the list when you create it?
@@ -89,22 +105,20 @@ public class List {
      * There will be some clients of the ADT that will require
      * the list to contain n elements which is known
      * at the time of creating the list.
-     * 
      * The overloaded constructor is a way to initialize a list with
      * a list capacity of n items where n is given as an argument to
      * constructor.
-     * 
+     *
      */
 /**
  * Constructs the object.
  *
  * @param      capacity  The capacity
  */
-    public List(int capacity) {
+    public List(final int capacity) {
         size = 0;
         list = new int[capacity];
     }
-    
     /*
      * The add method does what the name suggests.
      * Add an int item to the list.
@@ -113,7 +127,6 @@ public class List {
      * Is it the same as the end of the array?
      * Think about how you can use the size variable to add item
      * to the list.
-     * 
      * The method returns void (nothing)
      */
 /**
@@ -121,14 +134,13 @@ public class List {
  *
  * @param      item  The item
  */
-    public void add(int item) {
+    public void add(final int item) {
         //Inserts the specified element at the end of the list.
         if (size == list.length) {
             resize();
         }
         list[size++] = item;   
     }
-
     /*
      *
      * Resize the list
@@ -157,14 +169,7 @@ public class List {
      * Should the resize be public method or private?
      * Should the resize method return any values?
      * You know enough of Object Oriented Programming to answer these questions :-)
-     *
-     */
-
     // todo create resize method
-    
-    private void resize() {
-        list = Arrays.copyOf(list, size * 2);
-    }    
     /*
      * The size method returns the value of the size.
      * The purpose of the method is to announce the size of the list
@@ -180,7 +185,12 @@ public class List {
     public int size() {
         return size;
     }
-
+/**
+ * resize
+ */
+    private void resize() {
+        list = Arrays.copyOf(list, size * 2);
+    }
     /*
      * The remove method does what the name suggests.
      * Removes an int item, specified by the index argument, from the list
@@ -234,7 +244,6 @@ public class List {
  * @param      index  The index
  * @return     { description_of_the_return_value }
  */
-
     public int get(final int index) {
         if (index < 0 || index >= size) {
             return -1;
@@ -252,7 +261,7 @@ public class List {
      * System.out.println(l);
      * This statement is a shortcut for
      * System.out.println(l.toString());
-     * 
+     *
      * So, implement the toString method to display the items
      * in the list in the square brackets notation.
      * i.e., if the list has numbers 1, 2, 3
@@ -261,7 +270,6 @@ public class List {
      * Example: [1,2,3,0,0,0,0,0,0,0]
      * toString should only return the items in the list and
      * not all the elements of the array.
-     *
      */
 /**
  * @return     String representation of the object.
@@ -281,7 +289,6 @@ public class List {
         }
         return str;
     }
-    
     /*
      * Contains return true if the list has
      * the item passed as an argument to the method
@@ -297,7 +304,7 @@ public class List {
     }
 
     /*
-     * Returns the index of the first occurrence 
+     * Returns the index of the first occurrence
      * of the specified element in this list,
      * or -1 if this list does not contain the element.
      */
@@ -312,9 +319,12 @@ public class List {
         }
         return -1;
     }
-
-   /*Inserts all the elements of specified int 
+   /*Inserts all the elements of specified int
     array to the end of list*/
+    /**.
+     * Adds all.
+     * @param      items  The items
+     */
     public void addAll(int items[])
     {
         // write the logic
@@ -322,11 +332,15 @@ public class List {
             add(items[i]);
         }
     }
-
      /* 
-        Inserts the specified element at the specified index 
+        Inserts the specified element at the specified index
     by moving all the elements to the right.
         The method returns void (nothing)
+     */
+    /**.
+     * { function_description }
+     * @param      index  The index
+     * @param      item   The item
      */
     public void add(final int index, final int item) {
          // write the logic
@@ -340,8 +354,13 @@ public class List {
                 size++;
          }
     }
-    
-    /* Returns the count of occurances of a given item in the list*/
+    /**.
+     * { function_description }
+     *
+     * @param      item  The item
+     *
+     * @return     { description_of_the_return_value }
+     */
     public int count(final int item)
     {
          // write the logic 
@@ -353,12 +372,12 @@ public class List {
         }
         return count;
     }
-
-
+    /**.
+     * @param      args  The arguments
+     */
     public static void main(String[] args) {
         // create an object of the list to invoke methods on it
         List l = new List();
-
         // code to read the test cases input file
         Scanner stdin = new Scanner(new BufferedInputStream(System.in));
         // check if there is one more line to process
