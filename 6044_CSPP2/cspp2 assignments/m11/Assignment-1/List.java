@@ -281,7 +281,7 @@ public class List {
     /* Returns a boolean indicating whether the parameter i.e a List
     object is exactly matching with the given list or not.*/
     /**
-     * @param      list  The list
+     * @param      list1  The list
      * @return     { description_of_the_return_value }
      */
     public boolean equals(final List list1) {
