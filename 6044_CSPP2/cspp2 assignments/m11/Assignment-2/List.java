@@ -159,7 +159,7 @@ public class List<E> {
      */
     public boolean contains(E item) {
 		//Write logic for contains method
-        return indexOf(item) == -1;
+        return indexOf(item) > -1;
 
     }
     /*
