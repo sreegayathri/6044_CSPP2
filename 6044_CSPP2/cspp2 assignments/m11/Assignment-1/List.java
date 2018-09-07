@@ -24,9 +24,9 @@ public class List {
      * This is not desirable and so having private access specifer
      * will protect the array such corruption.
      * This is a hard concept to understand. Discuss with your mentor.
-    /**
-     * { var_description }
-     */
+/**
+* { var_description }
+*/
     private int[] list;
     // declare a private int[]
     // don't create the array yet using new
@@ -50,13 +50,16 @@ public class List {
      * Again, we use private as we don't want that size variable
      * to be accessed by the methods that are outside of the List class.
      */
-    /**
-     * { var_description }
+    /**.
+     * { size }
      */
     private int size;
     // declare a private int size
     // again, don't initialize it here
     // variable initialization should be done in the constructor
+    /**.
+     * { magic }
+     */
     private static final int H = 1000000;
     /*
      * The purpose of the constructor is to initialize the class variables with
