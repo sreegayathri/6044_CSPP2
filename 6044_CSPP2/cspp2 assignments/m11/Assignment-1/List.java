@@ -91,7 +91,7 @@ public class List {
     /**
      * @param      item  The item
      */
-    public void add(int item) {
+    public void add(final int item) {
         if (size == list.length) {
             resize();
         }
@@ -134,7 +134,7 @@ public class List {
     /**
      * @param      index  The index
      */
-    public void remove(int index) {
+    public void remove(final int index) {
         // write the logic for remove here. Think about what to do to the size
         // variable.
         if (index >= 0 && index < size) {
@@ -159,7 +159,7 @@ public class List {
      * @param      index  The index
      * @return     { description_of_the_return_value }
      */
-    public int get(int index) {
+    public int get(final int index) {
         // Replace the code below to write the code for get
         if (index < 0 && index >= size) {
             return -1;
@@ -205,7 +205,7 @@ public class List {
      * @param      item  The item
      * @return     { description_of_the_return_value }
      */
-    public boolean contains(int item) {
+    public boolean contains(final int item) {
         // Replace the code below
         return indexOf(item) == -1;
     }
@@ -217,7 +217,7 @@ public class List {
      * @param      item  The item
      * @return     { description_of_the_return_value }
      */
-    public int indexOf(int item) {
+    public int indexOf(final int item) {
         // Replace the code below
         for (int i = 0; i < size; i++) {
             if (item == list[i]) {
@@ -243,7 +243,7 @@ public class List {
      * Removes all.
      * @param      newArray  The new array
      */
-    public void removeAll(int[] newArray) {
+    public void removeAll(final int[] newArray) {
         // write the logic
         for (int i = 0; i < newArray.length; i++) {
             int index = indexOf(newArray[i]);
@@ -263,10 +263,13 @@ public class List {
      * @param      end    The end
      * @return     { description_of_the_return_value }
      */
-    public List subList(int start, int end) {
+    public List subList(final int start, final int end) {
         // write the logic for subList
         List subList = new List();
-        if (start < 0 || end < 0 || start > end || start == end || start > size|| start > size || start > end) {
+        if (start < 0 || end < 0 || start == end) {
+            System.out.println("Index Out of Bounds Exception");
+            return null; }
+        if (start > end || start > size || end > size) {
             System.out.println("Index Out of Bounds Exception");
             return null; }
         for (int i = start; i < end; i++)
@@ -279,7 +282,7 @@ public class List {
      * @param      list  The list
      * @return     { description_of_the_return_value }
      */
-    public boolean equals(List list ) {
+    public boolean equals(final List list ) {
         // Replace the code below
         return this.toString().equals(list.toString());
         /*if (size() != list.size()) {
