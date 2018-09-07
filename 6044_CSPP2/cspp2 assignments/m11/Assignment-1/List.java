@@ -246,6 +246,7 @@ public class List {
             int index = indexOf(newArray[i]);
             if (index != -1) {
                 remove(index);
+                index = indexOf(newArray[i]);
             }
         }
     }
@@ -262,15 +263,12 @@ public class List {
     public List subList(int start, int end) {
         // write the logic for subList
         List subList = new List();
-        if (start < 0 || end < 0 || start > end) {
+        if (start < 0 || end < 0 || start > end || start == end || start > size|| start > size || start > end) {
             System.out.println("Index Out of Bounds Exception");
-            return null;
-        } else {
-            for (int i = start; i < end; i++) {
-                subList.add(get(i));
-            }
-            return subList;
-        }
+            return null; }
+        for (int i = start; i < end; i++)
+            subList.add(this.list[i]);
+        return subList;
     }
     /* Returns a boolean indicating whether the parameter i.e a List
     object is exactly matching with the given list or not.*/
@@ -280,15 +278,17 @@ public class List {
      */
     public boolean equals(List list ) {
         // Replace the code below
-        if (size() != list.size()) {
+        return this.toString().equals(list.toString());
+        /*if (size() != list.size()) {
             return false;
         }
-        for (int i = 0;i < size; i++) {
+        for (int i = 0; i < list.size; i++) {
+            //if (list.get(i) == this.get(i))
             if (list.contains(this.list[i])) {
                 return false;
             }
         }
-        return true;
+        return true;*/
     }
     /* Removes all the elements from list
     * Think about this case and make the method
@@ -299,7 +299,9 @@ public class List {
     public void clear() {
         // write the logic for clear.
         size = 0;
-    }
+        list = new int[10];
+    } // after clearing the list it's size is back to 10
+    // no need of new object of list again, only the size/length is set to original empty list
     /**
      * @param      args  The arguments
      */
@@ -373,7 +375,7 @@ public class List {
                     l.removeAll(a);
                 }
                 break;
-            case "subList":
+            case "subList": {
                 if (tokens.length != 2) {
                     break;
                 }
@@ -384,6 +386,7 @@ public class List {
                     System.out.println(object);
                 }
                 break;
+            }
             case "equals":
                 if (tokens.length == 2) {
                     String[] lt = tokens[1].split(",");
