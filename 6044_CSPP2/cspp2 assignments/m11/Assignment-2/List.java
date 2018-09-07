@@ -112,7 +112,7 @@ public class List<E> {
     public E get(int index) {
          //Write logic for get method
         // return list[index];
-        if(index < 0 || index >= size) {
+        if(index < 0 && index >= size) {
             return null;
         } else {
             return list[index];
@@ -219,7 +219,7 @@ public class List<E> {
      */
     public boolean equals(List<E> listdata)
     {
-        return toString().equals(listdata.toString());
+        return this.toString().equals(listdata.toString());
     }
     /*Removes all the elements from list*/
     public void clear()
