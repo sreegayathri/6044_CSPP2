@@ -23,10 +23,10 @@ public class List {
      * list i.e., a list with incorrect items.
      * This is not desirable and so having private access specifer
      * will protect the array such corruption.
-     * This is a hard concept to understand. Discuss with your mentor.
-    /**
-    * { var_description }
-    */
+     * This is a hard concept to understand. Discuss with your mentor.*/
+/**
+ * { var_description }
+ */
     private int[] list;
     // declare a private int[]
     // don't create the array yet using new
