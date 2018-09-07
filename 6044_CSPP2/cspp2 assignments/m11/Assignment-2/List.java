@@ -5,7 +5,6 @@ import java.util.Arrays;
      * An array would be good. Right?
      * So, when we do not what we are going to have in the list
      * We need to create a Generic list to store the items
-
      * Here E is a type parameter, and it will be replaced with
         actual type when the object got created.
      */
@@ -38,13 +37,12 @@ public class List<E> {
         if (size == list.length) {
             resize();
         }
-        list[size++] = item;
+        list[(size++)] = item;
     }
     /*Inserts all the elements of specified int
     array to the end of list*/
     public void addAll(E[] items) {
-        //Write logic for addAll method
-        for (int i =0; i < items.length; i++) {
+        for (int i = 0; i < items.length; i++) {
             add(items[i]);
         }
     }
@@ -63,9 +61,8 @@ public class List<E> {
      * The method returns an int. Empty list should return 0.
      */
     public int size() {
-    	return size;
+        return size;
     }
-
     /*
      * The remove method does what the name suggests.
      * Removes a String item, specified by the index argument, from the list
@@ -87,9 +84,8 @@ public class List<E> {
      * The method returns void (nothing)
      */
     public void remove(int index) {
-        //Write logic for remove method
-        if(index >= 0 && index < size) {
-            for(int i = index; i < size - 1; i++) {
+        if (index >= 0 && index < size) {
+            for (int i = index; i < size - 1; i++) {
                 list[i] = list[i + 1];
             }
             list[size] = null;
@@ -110,9 +106,7 @@ public class List<E> {
      * number of items in the list? Would size variable be useful?
      */
     public E get(int index) {
-         //Write logic for get method
-        // return list[index];
-        if(index < 0 && index >= size) {
+        if (index < 0 || index >= size) {
             return null;
         } else {
             return list[index];
@@ -138,19 +132,18 @@ public class List<E> {
      * not all the elements of the array.
      *
      */
-    public String toString() {    
-        if(size == 0) {
+    public String toString() {
+        if (size == 0) {
             return "[]";
         }
         String str = "[";
         int i = 0;
-        for(i = 0; i < size - 1; i++) {
+        for (i = 0; i < size - 1; i++) {
             str = str + list[i] + ",";
         }
         str = str + list[i] + "]";
         return str;
     }
-    
     /*
      * Contains return true if the list has
      * the item passed as an argument to the method
@@ -158,7 +151,6 @@ public class List<E> {
      * the item exists and otherwise false
      */
     public boolean contains(E item) {
-		//Write logic for contains method
         return indexOf(item) > -1;
 
     }
@@ -169,9 +161,8 @@ public class List<E> {
      */
 
     public int indexOf(E item) {
-       //Write logic for indexOf method
-        for(int i = 0; i < size; i++) {
-            if(item.equals(list[i])) {
+       for (int i = 0; i < size; i++) {
+            if (item.equals(list[i])) {
                 return i;
             }
         }
@@ -181,9 +172,7 @@ public class List<E> {
     /* Removes all of its elements that
      * are contained in the specified int array.
      */
-    public void removeAll(E[] items)
-    {
-        // write the logic
+    public void removeAll(E[] items) {
         for (int i = 0; i < items.length; i++) {
             int index = indexOf(items[i]);
             while (index != -1) {
@@ -198,21 +187,20 @@ public class List<E> {
      indicates the startIndex and the second parameter
      indicates the endIndex.
      */
-    public List<E> subList(int n, int n2) {
-
-        List subList = new List();
+    public List subList(int n, int n2) {
+        if ( n > size || n2 > size || n > n2) {
+            System.out.println("Index Out of Bounds Exception");
+            return null;
+        }
         if (n < 0 || n2 < 0 || n == n2) {
             System.out.println("Index Out of Bounds Exception");
             return null;
         }
-        if (n > n2 || n > size || n2 > size) {
-            System.out.println("Index Out of Bounds Exception");
-            return null;
+        List sublist = new List(n2 - n);
+        for(int i = n; i < n2; i++) {
+            sublist.add(this.get(i));
         }
-        for (int i = n; i < n2; i++) {
-            subList.add(this.list[i]);
-        }
-        return subList;
+        return sublist;
     }
     /*Returns a boolean indicating whether the parameter
       i.e a List object is exactly matching with the given list or not.
@@ -224,7 +212,6 @@ public class List<E> {
     /*Removes all the elements from list*/
     public void clear()
     {
-        // write the logic for clear.
         size = 0;
         list = (E[]) new Object[10];
     }
