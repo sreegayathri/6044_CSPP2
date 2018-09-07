@@ -247,7 +247,7 @@ public class List {
 		// write the logic
 		for (int i = 0; i < newArray.length; i++) {
 			int index = indexOf(newArray[i]);
-			if (index != -1) {
+			while (index != -1) {
 				remove(index);
 				index = indexOf(newArray[i]);
 			}
