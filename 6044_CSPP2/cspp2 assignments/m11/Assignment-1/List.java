@@ -24,7 +24,7 @@ public class List {
      * This is not desirable and so having private access specifer
      * will protect the array such corruption.
      * This is a hard concept to understand. Discuss with your mentor.*/
-/**
+/**.
  * { var_description }
  */
     private int[] list;
@@ -284,9 +284,9 @@ public class List {
      * @param      list  The list
      * @return     { description_of_the_return_value }
      */
-    public boolean equals(final List list) {
+    public boolean equals(final List list1) {
         // Replace the code below
-        return toString().equals(list.toString());
+        return toString().equals(list1.toString());
         /*if (size() != list.size()) {
             return false;
         }
