@@ -264,12 +264,13 @@ public class List {
         List subList = new List();
         if (start < 0 || end < 0 || start > end) {
             System.out.println("Index Out of Bounds Exception");
+            return null;
         } else {
             for (int i = start; i < end; i++) {
                 subList.add(get(i));
             }
+            return subList;
         }
-        return subList;
     }
     /* Returns a boolean indicating whether the parameter i.e a List
     object is exactly matching with the given list or not.*/
