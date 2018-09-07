@@ -274,8 +274,9 @@ public class List {
             System.out.println("Index Out of Bounds Exception");
             return null;
         }
-        for (int i = start; i < end; i++)
+        for (int i = start; i < end; i++) {
             subList.add(this.list[i]);
+        }
         return subList;
     }
     /* Returns a boolean indicating whether the parameter i.e a List
