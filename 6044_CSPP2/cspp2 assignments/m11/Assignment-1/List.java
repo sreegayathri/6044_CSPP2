@@ -61,13 +61,12 @@ public class List {
 	 * { magic }
 	 */
 	private static final int H = 10;
-	/*
-	 * The purpose of the constructor is to initialize the class variables with
-	 * some default values.
-	 */
-	/**
-	 * Constructs the object.
-	 */
+	/* The purpose of the constructor is to
+	// initialize the class variables with
+	 * some default values. */
+/**
+* Constructs the object.
+*/
 	public List() {
 		// what are the two variables to be initialized here? think about the
 		// private variables described above. What should be the default values?
