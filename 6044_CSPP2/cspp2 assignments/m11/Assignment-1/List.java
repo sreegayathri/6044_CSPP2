@@ -60,7 +60,7 @@ public class List {
     /**.
      * { magic }
      */
-    private static final int H = 1000000;
+    private static final int H = 10;
     /*
      * The purpose of the constructor is to initialize the class variables with
      * some default values.
@@ -285,7 +285,7 @@ public class List {
      * @param      list  The list
      * @return     { description_of_the_return_value }
      */
-    public boolean equals(final List list ) {
+    public boolean equals(final List list) {
         // Replace the code below
         return this.toString().equals(list.toString());
         /*if (size() != list.size()) {
@@ -302,15 +302,16 @@ public class List {
     /* Removes all the elements from list
     * Think about this case and make the method
     * the simpler.*/
-    /**
+    /**.
      * { null }
      */
     public void clear() {
         // write the logic for clear.
         size = 0;
-        list = new int[10];
+        list = new int[H];
     } // after clearing the list it's size is back to 10
-    // no need of new object of list again, only the size/length is set to original empty list
+    // no need of new object of list again, only the
+    // size/length is set to original empty list
     /**
      * @param      args  The arguments
      */
