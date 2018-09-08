@@ -2,7 +2,7 @@ import java.io.BufferedInputStream;
 import java.util.Scanner;
 
 public class List {
-	//Implement all the methods mentioned to build a ListADT
+    //Implement all the methods mentioned to build a ListADT
 
     /*
      * The goal for the list is to store items.
@@ -60,8 +60,6 @@ public class List {
      * The purpose of the constructor is to initialize the
      * class variables with some default values.
      */
-    
-    
 
     public List() {
 
@@ -87,11 +85,11 @@ public class List {
      * There will be some clients of the ADT that will require
      * the list to contain n elements which is known
      * at the time of creating the list.
-     * 
+     *
      * The overloaded constructor is a way to initialize a list with
      * a list capacity of n items where n is given as an argument to
      * constructor.
-     * 
+     *
      */
 
     // todo - add an overloaded constructor here
@@ -112,6 +110,9 @@ public class List {
      * The method returns void (nothing)
      */
     public void add(int item) {
+        if (size == list.length) {
+            System.out.println
+        }
         //Inserts the specified element at the end of the list.
         list[size++] = item;   
     }
@@ -179,7 +180,6 @@ public class List {
             return list[index];
         }
     }
-
     /*
      * What happens when you print an object using println?
      * Java provides a method named toString that is internally
@@ -235,7 +235,7 @@ public class List {
         return -1;
     }
 
-	public static void main(String[] args) {
+    public static void main(String[] args) {
         // create an object of the list to invoke methods on it
         List l = new List();
 
@@ -278,5 +278,5 @@ public class List {
                 break;
             }
         }
-	}
+    }
 }

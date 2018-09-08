@@ -26,7 +26,7 @@ public final class Solution {
                     comps += ""+i;
                 }
                 else{
-                    comps += "," + i;
+                    comps += " " + i;
                 }
                 isTrue = false;
             }
@@ -44,6 +44,7 @@ public final class Solution {
 
         Scanner scan = new Scanner(System.in);
         int n = scan.nextInt();
+        int a[] = new int[n];
         comps = "";
         boolean prime = oddComposites(n);
         System.out.println(n);

@@ -8,7 +8,7 @@ public class List {
 /**
  * { item_description }
  */
-	//Implement all the methods mentioned to build a ListADT
+    //Implement all the methods mentioned to build a ListADT
     /*
      * The goal for the list is to store items.
      * How are we going to store the items in the list?
@@ -58,7 +58,7 @@ public class List {
     // again, don't initialize it here
     // variable initialization should be done in the constructor
     private int size;
-
+    private static final int h = 10;
     /*
      * The purpose of the constructor is to initialize the
      * class variables with some default values.
@@ -75,7 +75,7 @@ public class List {
         // What should be the default values?
         // In the case of the list, it should be empty but
         // it should be initialized with an array size like 10
-        list = new int[10];
+        list = new int[h];
 
         // Think about the initial value for size.
         // How many items do we have in the list when you create it?
@@ -209,7 +209,7 @@ public class List {
  *
  * @param      index  The index
  */
-    public void remove(int index) {
+    public void remove(final int index) {
         // write the logic for remove here.
         // Think about what to do to the size variable.
         if(index >= 0 && index < size) {
@@ -238,7 +238,7 @@ public class List {
  * @return     { description_of_the_return_value }
  */
 
-    public int get(int index) {
+    public int get(final int index) {
         if(index < 0 || index >= size) {
             return -1;
         } else {
@@ -270,8 +270,9 @@ public class List {
  * @return     String representation of the object.
  */
     public String toString() {
-        if(size == 0)
-            return "";
+        if(size == 0) {
+            return "[]";
+        }
         String str = "[";
         int i = 0;
         for(i = 0; i < size - 1; i++) {
@@ -291,7 +292,7 @@ public class List {
  * @param      item  The item
  * @return   bool  { description_of_the_return_value }
  */
-    public boolean contains(int item) {
+    public boolean contains( final int item) {
         return indexOf(item) == -1;
     }
 
@@ -304,7 +305,7 @@ public class List {
  * @param      item  The item
  * @return     { description_of_the_return_value }
  */
-    public int indexOf(int item) {
+    public int indexOf(final int item) {
         for(int i = 0; i < size; i++) {
             if(item == list[i])
                 return i;
@@ -314,7 +315,12 @@ public class List {
 /**
  * @param      args  The arguments
  */
-	public static void main(String[] args) {
+
+    
+
+
+
+    public static void main(String[] args) {
         // create an object of the list to invoke methods on it
         List l = new List();
 
@@ -329,8 +335,30 @@ public class List {
             // based on the list operation invoke the corresponding method
             switch (tokens[0]) {
                 case "add":
-                l.add(Integer.parseInt(tokens[1]));
-                break;
+                    if ((token.length) == 2) {
+                        String[] tok = tokens[1].split(",");
+                        if (tok.length == 1) {
+                            l.add(Integer.parseInt(tokens[1]));
+                        } else {
+                            if (tok.length >1) {
+                                l.add(Integer.parseInt(tok[0]), Integer.parseInt(tok[1]));
+                            }
+                        }
+                    }
+                    break;
+                case "count":
+                    System.out.println(l.count(Integer.parseInt(tokens[1])));
+                    break;
+                case "addALL":
+                    if (tokens.length == 2) {
+                        String[] toke = tokens[1].split(",");
+                        int[] temporary = new int[toke.length];
+                        for (int i = 0; i < temporary.length; i++) {
+                            temporary[i] = Integer.parseInt(toke[i]);
+                        }
+                        l.addALL(temporary);
+                    }
+                    break;
                 case "size":
                 // invoke size method and print the list size
                 // BTW, list size is not the array size
@@ -357,5 +385,5 @@ public class List {
                 break;
             }
         }
-	}
+    }
 }

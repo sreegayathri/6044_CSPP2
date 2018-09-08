@@ -5,7 +5,7 @@ import java.util.Scanner;
 /**
  * class begins.
  */
-final class Solution {
+public final class Solution {
     /**
      * the class.
      */
