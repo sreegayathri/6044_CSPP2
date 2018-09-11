@@ -201,6 +201,23 @@ public class List {
     } // after clearing the list it's size is back to 10
     // no need of new object of list again, only the
     // size/length is set to original empty list
+    /**.
+     * { function_description }
+     * @param      index  The index
+     * @param      item   The item
+     */
+    public void add(final int index, final int item) {
+         // write the logic
+        if (index < 0) {
+            System.out.println("Negative Index Exception");
+        } else {
+            for (int i = size; i > index; i--) {
+                list[i] = list[i - 1];
+            }
+            list[index] = item;
+                size++;
+         }
+    }
     /**
      * @param      args  The arguments
      */
