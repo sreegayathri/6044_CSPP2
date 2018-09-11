@@ -65,7 +65,7 @@ public class SortedSet extends Set {
         int[] subset = new int[toindex - fromindex];
         int k = 0;
         if (fromElement > toElement) {
-            throw new Exception("InvalidArgumentstoSubsetException");
+            throw new Exception("Set Empty Exception");
         }
         for (int i = fromindex; i < toindex; i++) {
                 subset[k++] = this.get(i);
