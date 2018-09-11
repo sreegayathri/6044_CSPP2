@@ -15,7 +15,7 @@ import java.util.Arrays;
 public class SortedSet extends Set {
     /**.
     * { function_description }
-    *
+    * @throws     Exception  { exception_description }
     * @return     { description_of_the_return_value }
     */
     public int last() throws Exception {
@@ -56,7 +56,7 @@ public class SortedSet extends Set {
     *
     * @param      fromElement  The fromElement
     * @param      toElement    The toElement
-    *
+    * @throws     Exception  { exception_description }
     * @return     { description_of_the_return_value }
     */
     public int[] subSet(final int fromElement, final int toElement) throws Exception {
@@ -77,7 +77,7 @@ public class SortedSet extends Set {
     * { function_description }
     *
     * @param      toElement  The toElement
-    *
+    * @throws     Exception  { exception_description }
     * @return     { description_of_the_return_value }
     */
     public int[] headset(final int toElement) throws Exception {
@@ -89,7 +89,7 @@ public class SortedSet extends Set {
     }
     /**.
     * { function_description }
-    *   
+    *
     * @param      s     { parameter_description }
     *
     * @return     { description_of_the_return_value }
