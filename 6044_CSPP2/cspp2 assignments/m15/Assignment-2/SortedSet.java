@@ -170,12 +170,11 @@ public class SortedSet extends Set {
             case "last":
                 try {
                     System.out.println(s.last());
-                    break;
                 } catch (Exception se) {
                     System.out.println(se.getMessage());
                 }
+                break;
             case "intersection":
-                System.out.println("Hello");
                 s = new SortedSet();
                 SortedSet t = new SortedSet();
                 intArray = intArray(tokens[1]);
