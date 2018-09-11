@@ -276,8 +276,8 @@ public class List {
                 try {
                     if (tokens.length == 2) {
                         l.remove(Integer.parseInt(tokens[1]));
-                    } 
-                } catch(Exception e) {
+                    }
+                } catch (Exception e) {
                     System.out.println("Invalid Position Exception");
                 }
                 break;
@@ -325,7 +325,7 @@ public class List {
                         }
                         l.removeAll(a);
                     }
-                } catch(Exception e) {
+                } catch (Exception e) {
                     System.out.println("Invalid Position Exception");
                 }
                 
@@ -342,7 +342,7 @@ public class List {
                     if (object != null) {
                         System.out.println(object);
                     }
-                } catch(Exception e) {
+                } catch (Exception e) {
                     System.out.println("Index Out of Bounds Exception");
                 }
                 break;
