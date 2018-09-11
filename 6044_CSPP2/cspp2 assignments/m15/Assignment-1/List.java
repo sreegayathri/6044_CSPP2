@@ -46,7 +46,7 @@ public class List {
     private void resize() {
         list = Arrays.copyOf(list, size * 2);
     }
-/**
+/**.
  * { function_description }
  *
  * @param      index      The index
@@ -224,9 +224,6 @@ public class List {
                 size++;
          }
     }
-    /**
-     * @param      args  The arguments
-     */
     /**.
      * { function_description }
      *
@@ -244,6 +241,9 @@ public class List {
         }
         return count;
     }
+    /**
+     * @param      args  The arguments
+     */
     public static void main(final String[] args) {
         // create an object of the list to invoke methods on it
         List l = new List();
