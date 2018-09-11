@@ -337,7 +337,7 @@ public class List {
                         System.out.println(object);
                     }
                 } catch(Exception e) {
-                    System.out.println("Index Out Of Bounds Exception");
+                    System.out.println("Index Out of Bounds Exception");
                 }
                 break;
             case "equals":
