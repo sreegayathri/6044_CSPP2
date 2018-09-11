@@ -328,7 +328,6 @@ public class List {
                 } catch (Exception e) {
                     System.out.println("Invalid Position Exception");
                 }
-                
                 break;
             case "subList":
                 try {
