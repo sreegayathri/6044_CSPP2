@@ -46,9 +46,13 @@ public class List {
     private void resize() {
         list = Arrays.copyOf(list, size * 2);
     }
-    /**
-     * @param      index  The index
-     */
+/**
+ * { function_description }
+ *
+ * @param      index      The index
+ *
+ * @throws     Exception  { exception_description }
+ */
     public void remove(final int index) throws Exception {
         if (index < 0 || index >= size) {
             throw new Exception();
@@ -132,6 +136,7 @@ public class List {
     //array.
     /**
      * Removes all.
+     * @throws     Exception  { exception_description }
      * @param      newArray  The new array
      */
     public void removeAll(final int[] newArray) throws Exception {
@@ -152,6 +157,7 @@ public class List {
     /**
      * @param      start  The start
      * @param      end    The end
+     * @throws     Exception  { exception_description }
      * @return     { description_of_the_return_value }
      */
     public List subList(final int start, final int end) throws Exception {
