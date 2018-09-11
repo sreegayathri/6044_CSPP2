@@ -89,7 +89,7 @@ public class SortedSet extends Set {
     }
     /**.
     * { function_description }
-    *
+    *   
     * @param      s     { parameter_description }
     *
     * @return     { description_of_the_return_value }
@@ -175,6 +175,7 @@ public class SortedSet extends Set {
                     System.out.println(se.getMessage());
                 }
             case "intersection":
+                System.out.println("Hello");
                 s = new SortedSet();
                 SortedSet t = new SortedSet();
                 intArray = intArray(tokens[1]);
