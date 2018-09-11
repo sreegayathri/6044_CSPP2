@@ -204,6 +204,23 @@ public class List {
     /**
      * @param      args  The arguments
      */
+    /**.
+     * { function_description }
+     *
+     * @param      item  The item
+     *
+     * @return     { description_of_the_return_value }
+     */
+    public int count(final int item) {
+         // write the logic
+        int count = 0;
+        for (int i = 0; i < size; i++) {
+            if (list[i] == item) {
+                count += 1;
+            }
+        }
+        return count;
+    }
     public static void main(final String[] args) {
         // create an object of the list to invoke methods on it
         List l = new List();
@@ -261,6 +278,9 @@ public class List {
                                            parseInt(tokens[1])));
                 }
                 break;
+            case "count":
+                    System.out.println(l.count(Integer.parseInt(tokens[1])));
+                    break;
             case "addAll":
                 if (tokens.length == 2) {
                     String[] t1 = tokens[1].split(",");
