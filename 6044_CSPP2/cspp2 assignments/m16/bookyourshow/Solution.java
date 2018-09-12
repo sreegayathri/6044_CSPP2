@@ -7,25 +7,61 @@ import java.util.Arrays;
  * Class for show.
  */
 class Show {
-    
+    /**
+     * movieName description.
+     */
     private String movieName;
+    /**
+     * showDate description.
+     */
     private String showDate;
+    /**
+     * seats description.
+     */
     private String[] seats;
 
+
+    /**
+     * Constructs the object.
+     *
+     * @param      mviename  The movieName
+     * @param      shwdate   The showDate
+     * @param      seats1     The seats 1
+     */
     Show(final String mviename, final String shwdate, final String[] seats1) {
         this.movieName = mviename;
         this.showDate = shwdate;
         this.seats = seats1;
     }
+    /**
+     * Gets the movieName.
+     *
+     * @return     The movieName.
+     */
     public String getMovieName() {
         return this.movieName;
     }
+    /**
+     * Gets the showDate.
+     *
+     * @return     The showDate.
+     */
     public String getShowDate() {
         return this.showDate;
     }
+    /**
+     * Gets the seats.
+     *
+     * @return     The seats.
+     */
     public String[] getSeats() {
         return this.seats;
     }
+    /**
+     * printExceptTickets method.
+     *
+     * @return     { description_of_the_return_value }
+     */
     public String printExceptTickets() {
         String s = "";
         s += movieName + "," + showDate;
