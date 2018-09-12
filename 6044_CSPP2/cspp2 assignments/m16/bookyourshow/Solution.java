@@ -31,6 +31,11 @@ class Show {
         s += movieName + "," + showDate;
         return s;
     }
+    /**
+     * Returns a string representation of the object.
+     *
+     * @return     String representation of the object.
+     */
     public String toString() {
         String s = "";
         s += movieName + "," + showDate + ",";
@@ -39,23 +44,41 @@ class Show {
     }
 }
 
-
+/**
+ * Class for patron.
+ */
 class Patron {
-
+    /**
+     * patronname description.
+     */
     private String patronname;
-
+    /**
+     * mobileNumber description.
+     */
     private String mobileNumber;
-
+    /**
+     * bookedseats description.
+     */
     private String[] bookedseats;
 
-
+    /**
+     * Constructs the object.
+     *
+     * @param      name    The name
+     * @param      phnnum  The phnnum
+     * @param      booked  The booked
+     */
     Patron(final String name,
         final String phnnum, final String[] booked) {
         this.patronname = name;
         this.mobileNumber = phnnum;
         this.bookedseats = booked;
     }
-
+    /**
+     * Gets the patronname.
+     *
+     * @return     The patronname.
+     */
     public String getPatronname() {
         return this.patronname;
     }
