@@ -98,7 +98,11 @@ class BookYourShow {
     public void patronresize() {
         patrons = Arrays.copyOf(patrons, patrons.length * 2);
     }
-
+    /**
+     * Adds a show.
+     *
+     * @param      nshow  The nshow
+     */
     public void addAShow(final Show nshow) {
         if (showsize == shows.length) {
             showresize();
@@ -106,14 +110,25 @@ class BookYourShow {
         shows[showsize++] = nshow;
     }
 
-
+    /**
+     * Adds a patron.
+     *
+     * @param      npatron  The n patron
+     */
     public void addAPatron(final Patron npatron) {
         if (patronsize == patrons.length) {
             patronresize();
         }
         patrons[patronsize++] = npatron;
     }
-
+    /**
+     * Gets a show.
+     *
+     * @param      movieName  The movieName
+     * @param      showDate   The showDate
+     *
+     * @return     A show.
+     */
     public Show getAShow(final String movieName, final String showDate) {
         for (int i = 0; i < showsize; i++) {
             if (shows[i].getMovieName().equals(movieName)
