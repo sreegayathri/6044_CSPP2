@@ -123,7 +123,13 @@ class BookYourShow {
         }
         return null;
     }
-
+    /**
+     * bookAShow method.
+     *
+     * @param      movieName  The movieName
+     * @param      showDate   The showDate
+     * @param      p          { parameter_description }
+     */
     public void bookAShow(final String movieName,
         final String showDate, final Patron p) {
         addAPatron(p);
@@ -143,7 +149,15 @@ class BookYourShow {
             System.out.println("No show");
         }
     }
-
+    /**
+     * printTickets method.
+     *
+     * @param      movieName  The movieName
+     * @param      showDate   The showDate
+     * @param      mobileNumber  The mobileNumber
+     *
+     * @return     { description_of_the_return_value }
+     */
     public String printTickets(final String movieName,
         final String showDate, final String mobileNumber) {
         Show show = getAShow(movieName, showDate);
