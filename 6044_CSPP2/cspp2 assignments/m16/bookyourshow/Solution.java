@@ -7,7 +7,7 @@ import java.util.Arrays;
  * Class for show.
  */
 class Show {
-
+    
     private String movieName;
     private String showDate;
     private String[] seats;
@@ -162,20 +162,30 @@ class BookYourShow {
         }
         return str;
     }
-
+    /**
+     * Shows all method.
+     */
     public void showAll() {
         for (int i = 0; i < showsize; i++) {
             System.out.println(shows[i]);
         }
     }
 }
-
+/**
+ * class Solution.
+ */
 public final class Solution {
-
+    /**
+     * Constructs the object.
+     */
     private Solution() {
 
     }
-
+    /**
+     * main method to drive program.
+     *
+     * @param      args  The arguments
+     */
     public static void main(final String[] args) {
         BookYourShow bys = new BookYourShow();
         Scanner scan = new Scanner(System.in);
