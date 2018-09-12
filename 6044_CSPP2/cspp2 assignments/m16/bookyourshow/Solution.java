@@ -59,42 +59,79 @@ class Patron {
     public String getPatronname() {
         return this.patronname;
     }
-
+    /**
+     * Gets the mobileNumber.
+     *
+     * @return     The mobileNumber.
+     */
     public String getMobileNumber() {
         return this.mobileNumber;
     }
-
+    /**
+     * Gets the bookedseats.
+     *
+     * @return     The bookedseats.
+     */
     public String[] getBookedseats() {
         return this.bookedseats;
     }
-
+    /**
+     * Returns a string representation of the object.
+     *
+     * @return     String representation of the object.
+     */
     public String toString() {
         String s = "";
         return s;
     }
 }
 
-
+/**
+ * Class for book your show.
+ */
 class BookYourShow {
-
+    /**
+     * shows array description.
+     */
     private Show[] shows;
+    /**
+     * patron array description.
+     */
     private Patron[] patrons;
+    /**
+     * showsize description.
+     */
     private int showsize;
+    /**
+     * patronsize description.
+     */
     private int patronsize;
 
+    /**
+     * Constructs the object.
+     */
+    /**
+     * @variable TEN.
+     */
     private static final int TEN = 10;
-
+    /**
+     * Constructs the object.
+     */
     BookYourShow() {
         shows = new Show[TEN];
         patrons = new Patron[TEN];
         showsize = 0;
         patronsize = 0;
     }
-
+    /**
+     * showresize method.
+     */
     public void showresize() {
         shows = Arrays.copyOf(shows, shows.length * 2);
     }
-
+    /**
+     * patronresize method.
+     */
     public void patronresize() {
         patrons = Arrays.copyOf(patrons, patrons.length * 2);
     }
