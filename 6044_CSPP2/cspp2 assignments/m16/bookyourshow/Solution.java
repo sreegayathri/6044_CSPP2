@@ -7,7 +7,7 @@ import java.util.Arrays;
  * Class for show.
  */
 class Show {
-    
+
     private String movieName;
     private String showDate;
     private String[] seats;
