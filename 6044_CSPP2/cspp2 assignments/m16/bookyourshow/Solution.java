@@ -72,12 +72,12 @@ class Show {
      *
      * @return     String representation of the object.
      */
-    public String toString() {
+/*    public String toString() {
         String s = "";
         s += movieName + "," + showDate + ",";
         s += Arrays.toString(seats).replace(", ", ",");
         return s;
-    }
+    }*/
 }
 
 /**
