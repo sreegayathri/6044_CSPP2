@@ -33,6 +33,12 @@ class Set {
         }
         set[size++] = item;
     }
+    public void add(final int[] item) {
+        if (size == set.length) {
+            resize();
+        }
+        set[size++] = item;
+    }
 /**
  * { function_description }
  *

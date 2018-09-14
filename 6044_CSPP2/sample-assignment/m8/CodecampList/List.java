@@ -108,7 +108,7 @@ public class List {
     public void add(final int item) {
 /**
  * { item_description }
- */
+     */
     //Inserts the specified element at the end of the list.
         ary[size] = item;
         size++;
@@ -122,10 +122,11 @@ public class List {
      *
      * @return     { description_of_the_return_value }
      */
+    
     public int size() {
-/**
- * { item_description }
- */ // replace the code below to implement the size method
+    /**
+     * { item_description }
+     */ // replace the code below to implement the size method
         return size;
     }
 
