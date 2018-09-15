@@ -28,8 +28,9 @@ public final class Solution {
             // read the line
             String line = s.nextLine();
              // split the line using space
-            String[] tokens = line.split("");
+            String[] tokens = line.split(" ");
               // based on the list operation invoke the corresponding method
+            tokens[1].split(",");
             switch (tokens[0]) {
                 case "LOAD_QUESTIONS":
                 System.out.println("|----------------|");
