@@ -84,7 +84,7 @@ public final class Solution {
         // read the user responses from the console
         // store the user respones in the quiz object
         if (answerCount <= 2) {
-            System.out.println("<question text> does not have enough answer choices");
+            System.out.println("trick question  does not have enough answer choices");
         }
     }
 
