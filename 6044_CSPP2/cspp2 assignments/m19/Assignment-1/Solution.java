@@ -30,7 +30,6 @@ public final class Solution {
              // split the line using space
             String[] tokens = line.split(" ");
               // based on the list operation invoke the corresponding method
-            tokens[1].split(",");
             switch (tokens[0]) {
                 case "LOAD_QUESTIONS":
                 System.out.println("|----------------|");
@@ -84,6 +83,9 @@ public final class Solution {
         // write your code here to display the quiz questions
         // read the user responses from the console
         // store the user respones in the quiz object
+        if (answerCount <= 2) {
+            System.out.println("<question text> does not have enough answer choices");
+        }
     }
 
     /**
