@@ -3,7 +3,7 @@ import java.util.Scanner;
 /**
  * Solution class for code-eval.
  */class Quiz{
-	
+
 }
 
 public final class Solution {
@@ -65,6 +65,11 @@ public final class Solution {
         // write your code here to read the questions from the console
         // tokenize the question line and create the question object
         // add the question objects to the quiz class
+        if (questionCount >= 1) {
+        	System.out.println(questionCount+ "are added to the quiz");
+        } else {
+        	System.out.println("Quiz does not have questions");
+        }
     }
 
     /**
