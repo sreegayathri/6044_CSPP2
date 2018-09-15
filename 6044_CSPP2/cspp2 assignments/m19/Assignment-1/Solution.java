@@ -1,28 +1,28 @@
 import java.util.Scanner;
-/**
+/**.
  * Class for quiz.
  */
 class Quiz{
-    /**
+    /**.
      * Constructs the object.
      */
     Quiz(){
-/**
+/**.
  * { item_description }
  */
     }
 }
-/**
+/**.
  * Solution class for code-eval.
  */
 public final class Solution {
-     /**
+     /**.
      * Constructs the object.
      */
     private Solution() {
         // leave this blank
     }
-    /**
+    /**.
      * main function to execute test cases.
      *
      * @param      args  The arguments
@@ -66,7 +66,7 @@ public final class Solution {
             }
         }
     }
-    /**
+    /**.
      * Loads questions.
      *
      * @param      s              The scanner object for user input
@@ -85,7 +85,7 @@ public final class Solution {
         }
     }
 
-    /**
+    /**.
      * Starts a quiz.
      *
      * @param      s            The scanner object for user input
@@ -97,7 +97,7 @@ public final class Solution {
         // read the user responses from the console
         // store the user respones in the quiz object
     }
-    /**
+    /**.
      * Displays the score report
      *
      * @param      quiz     The quiz object
