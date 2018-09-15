@@ -28,7 +28,8 @@ public final class Solution {
             // read the line
             String line = s.nextLine();
              // split the line using space
-            String[] tokens = line.split(" ");
+            String[] token = line.split(" ");
+            String[] tokens = line.split(":");
               // based on the list operation invoke the corresponding method
             switch (tokens[0]) {
                 case "LOAD_QUESTIONS":
@@ -68,6 +69,7 @@ public final class Solution {
         // write your code here to read the questions from the console
         // tokenize the question line and create the question object
         // add the question objects to the quiz class
+        //loadQuestions ql = new loadQuestions();
         if (questionCount >= 1) {
             System.out.println(questionCount+ " "+ "are added to the quiz");
         } else {
