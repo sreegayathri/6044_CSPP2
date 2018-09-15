@@ -37,7 +37,7 @@ public final class Solution {
 // read the line
             String line = s.nextLine();
 // split the line using space
-            String[] tokens = line.split("\\r?\n");
+            String[] tokens = line.split("\n");
 // based on the list operation invoke the corresponding method
             switch (tokens[0]) {
             case "LOAD_QUESTIONS":
