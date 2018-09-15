@@ -36,7 +36,7 @@ public final class Solution {
                 System.out.println("| Load Questions |");
                 System.out.println("|----------------|");
                 loadQuestions(s, q, Integer.parseInt(tokens[1]));
-                System.out.println(tokens[1]);
+
                 //System.out.println("aaaaaaa");
                 break;
                 case "START_QUIZ":
@@ -86,10 +86,7 @@ public final class Solution {
         // write your code here to display the quiz questions
         // read the user responses from the console
         // store the user respones in the quiz object
-/*        if (answerCount <= 2) {
-            System.out.println("trick question  does not have enough answer choices");
-        }
-    public token[1][0] != ;*/
+        System.out.println("not enough choices");
     }
     /**
      * Displays the score report
@@ -98,6 +95,7 @@ public final class Solution {
      */
     public static void displayScore(final Quiz quiz) {
         // write your code here to display the score report
+        System.out.println("enough");
 
     }
 }
