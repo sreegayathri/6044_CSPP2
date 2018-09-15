@@ -28,7 +28,7 @@ public final class Solution {
             // read the line
             String line = s.nextLine();
              // split the line using space
-            String[] tokens = line.split(",");
+            String[] tokens = line.split(" ");
               // based on the list operation invoke the corresponding method
             switch (tokens[0]) {
                 case "LOAD_QUESTIONS":
@@ -36,13 +36,14 @@ public final class Solution {
                 System.out.println("| Load Questions |");
                 System.out.println("|----------------|");
                 loadQuestions(s, q, Integer.parseInt(tokens[1]));
-                System.out.println("aaaaaaa");
+                //System.out.println("aaaaaaa");
                 break;
                 case "START_QUIZ":
                 System.out.println("|------------|");
                 System.out.println("| Start Quiz |");
                 System.out.println("|------------|");
                 startQuiz(s, q, Integer.parseInt(tokens[1]));
+                System.out.println("fbgcgjh");
                 break;
                 case "SCORE_REPORT":
                 System.out.println("|--------------|");
