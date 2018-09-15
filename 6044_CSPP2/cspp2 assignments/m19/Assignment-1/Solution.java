@@ -2,11 +2,11 @@ import java.util.Scanner;
 /**.
  * Class for quiz.
  */
-class Quiz{
+class Quiz {
     /**.
      * Constructs the object.
      */
-    Quiz(){
+    Quiz() {
 /**.
  * { item_description }
  */
@@ -73,7 +73,8 @@ public final class Solution {
      * @param      quiz           The quiz object
      * @param      questionCount  The question count
      */
-    public static void loadQuestions(final Scanner s, final Quiz quiz, final int questionCount) {
+    public static void loadQuestions(final Scanner s, final Quiz quiz,
+                                            final int questionCount) {
         // write your code here to read the questions from the console
         // tokenize the question line and create the question object
         // add the question objects to the quiz class
