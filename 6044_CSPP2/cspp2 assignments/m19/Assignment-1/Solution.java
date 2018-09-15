@@ -1,11 +1,20 @@
 import java.util.Scanner;
-
+/**
+ * Class for quiz.
+ */
+class Quiz{
+    /**
+     * Constructs the object.
+     */
+    Quiz(){
+/**
+ * { item_description }
+ */
+    }
+}
 /**
  * Solution class for code-eval.
- */class Quiz{
-
-}
-
+ */
 public final class Solution {
      /**
      * Constructs the object.
