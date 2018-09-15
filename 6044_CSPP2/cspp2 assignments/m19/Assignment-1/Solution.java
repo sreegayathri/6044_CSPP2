@@ -28,7 +28,7 @@ public final class Solution {
             // read the line
             String line = s.nextLine();
              // split the line using space
-            String[] tokens = line.split(" ");
+            String[] tokens = line.split("");
               // based on the list operation invoke the corresponding method
             switch (tokens[0]) {
                 case "LOAD_QUESTIONS":
@@ -88,7 +88,7 @@ public final class Solution {
             System.out.println("trick question  does not have enough answer choices");
         }
     }
-/*    public token[1][0];*/
+/*    public token[1][0] != ;*/
     /**
      * Displays the score report
      *
