@@ -70,9 +70,10 @@ class ShoppingCart {
     public void addToCart(final Item item) {
         int index = catalog.indexOf(item);
         Item catalogItem = catalog.get(index);
-        index = cart.indexOf(item);
 
+        index = cart.indexOf(item);
         Item cartItem = cart.get(index);
+
         if (cartItem != null) {
             cartItem.setquantity(cartItem.getquantity() + item.getquantity());
             catalogItem.setquantity(catalogItem.getquantity() - item.getquantity());
@@ -100,28 +101,18 @@ class ShoppingCart {
                 catalogItem.setquantity(catalogItem.getquantity() + item.getquantity());
             }
         }
-        // for (Item cartitem : cart) {
-        //     if ((cartitem.getpname()).equals(item.getpname())) {
-        //         int a = cartitem.getquantity();
-        //         int b = item.getquantity();
-        //         int c = a - b;
-        //         cartitem.setquantity(c);
-        //     }
-        // }
+
     }
 
     public void showCart() {
         for (int i = 0; i < cart.size(); i++) {
             Item item = cart.get(i);
-            // System.out.println(item);
             System.out.println(item.getpname() + " " + item.getquantity());
         }
     }
     public void showCatalog() {
         for (int i = 0; i < catalog.size(); i++) {
             System.out.println(catalog.get(i));
-            //Item item = catalog.get(i);
-            //System.out.println(item.getpname() + " " + item.getquantity() + " " + item.getunitPrice());
         }
     }
 
