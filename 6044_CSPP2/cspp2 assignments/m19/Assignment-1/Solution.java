@@ -28,8 +28,7 @@ public final class Solution {
             // read the line
             String line = s.nextLine();
              // split the line using space
-            String[] token = line.split(" ");
-            String[] tokens = line.split(":");
+            String[] tokens = line.split(" ");
               // based on the list operation invoke the corresponding method
             switch (tokens[0]) {
                 case "LOAD_QUESTIONS":
@@ -88,7 +87,6 @@ public final class Solution {
         // write your code here to display the quiz questions
         // read the user responses from the console
         // store the user respones in the quiz object
-        System.out.println("not enough choices");
     }
     /**
      * Displays the score report
@@ -97,7 +95,5 @@ public final class Solution {
      */
     public static void displayScore(final Quiz quiz) {
         // write your code here to display the score report
-        System.out.println("enough");
-
     }
 }
