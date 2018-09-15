@@ -86,11 +86,11 @@ public final class Solution {
         // write your code here to display the quiz questions
         // read the user responses from the console
         // store the user respones in the quiz object
-        if (answerCount <= 2) {
+/*        if (answerCount <= 2) {
             System.out.println("trick question  does not have enough answer choices");
         }
+    public token[1][0] != ;*/
     }
-/*    public token[1][0] != ;*/
     /**
      * Displays the score report
      *
