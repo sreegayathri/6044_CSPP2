@@ -79,7 +79,7 @@ public final class Solution {
         // add the question objects to the quiz class
         //loadQuestions ql = new loadQuestions();
         if (questionCount >= 1) {
-            System.out.println(questionCount+ " "+ "are added to the quiz");
+            System.out.println(questionCount + " " + "are added to the quiz");
         } else {
             System.out.println("Quiz does not have questions");
         }
