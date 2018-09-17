@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.regex.Pattern;
 /**.
 * Class for quiz.
 */
@@ -38,6 +39,7 @@ public final class Solution {
             String line = s.nextLine();
 // split the line using space
             String[] tokens = line.split(" ");
+            //Pattern pattern = Pattern.compile("\\W+");
 // based on the list operation invoke the corresponding method
             switch (tokens[0]) {
             case "LOAD_QUESTIONS":
@@ -95,9 +97,10 @@ public final class Solution {
     */
     public static void startQuiz(final Scanner s, final Quiz quiz,
                                  final int answerCount) {
-// write your code here to display the quiz questions
-// read the user responses from the console
-// store the user respones in the quiz object
+    // write your code here to display the quiz questions
+    // read the user responses from the console
+    // store the user respones in the quiz object
+
     }
     /**.
     * Displays the score report
@@ -106,5 +109,6 @@ public final class Solution {
     */
     public static void displayScore(final Quiz quiz) {
 // write your code here to display the score report
+
     }
 }
