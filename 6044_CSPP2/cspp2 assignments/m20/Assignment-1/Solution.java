@@ -231,54 +231,52 @@ public final class Solution {
 // add the question objects to the quiz class
         if (q >= 1) {
             System.out.println(q + " " + "are added to the quiz");
-        }
-        if ( q == 0) {
-            System.out.println("Quiz does not have questions");
         } else {
-            for (int i = 0; i < q; i++) {
-                String question = scan.nextLine();
-                String[] obj = question.split(":");
-                if (obj.length < 5) {
-                    System.out.println("Error! Malformed question");
-                    return;
-                } else if (obj[1].split(",").length < 2){
-                    System.out.println("trick question  does not have enough answer choices");
-                    return;
-                } else if (Integer.parseInt(obj[2]) > 4) {
-                    System.out.println("Error! Correct answer choice number is out of range for question text 1");
-                    return;
-                } else if (Integer.parseInt(obj[3]) < 0) {
-                    System.out.println("Invalid max marks for question about sony");
-                    return;
-                } else if (Integer.parseInt(obj[4]) > 0) {
-                    System.out.println("Invalid penalty for question about sony");
-                    return;
-                } else if (obj[0].length() == 0) {
-                    System.out.println("Error! Malformed question");
-                    return;
-                }
+            System.out.println("Quiz does not have questions");
+        }
+        for (int i = 0; i < q; i++) {
+            String question = scan.nextLine();
+            String[] obj = question.split(":");
+            if (obj.length < 5) {
+                System.out.println("Error! Malformed question");
+                return;
+            } else if (obj[1].split(",").length < 2) {
+                System.out.println("trick question  does not have enough answer choices");
+                return;
+            } else if (Integer.parseInt(obj[2]) > 4) {
+                System.out.println("Error! Correct answer choice number is out of range for question text 1");
+                return;
+            } else if (Integer.parseInt(obj[3]) < 0) {
+                System.out.println("Invalid max marks for question about sony");
+                return;
+            } else if (Integer.parseInt(obj[4]) > 0) {
+                System.out.println("Invalid penalty for question about sony");
+                return;
+            } else if (obj[0].length() == 0) {
+                System.out.println("Error! Malformed question");
+                return;
             }
         }
     }
-        /**
-        * Starts a quiz.
-        * @param      scan  The scan
-        * @param      quiz  The quiz
-        * @param      q     The answer count
-        */
-        public static void startQuiz(final Scanner scan,
-                                     final Quiz quiz, final int q) {
+    /**
+    * Starts a quiz.
+    * @param      scan  The scan
+    * @param      quiz  The quiz
+    * @param      q     The answer count
+    */
+    public static void startQuiz(final Scanner scan,
+                                 final Quiz quiz, final int q) {
 // write your code here to display the quiz questions on the console.
 // read the user responses from the console using scanner object.
 // store the user respone in the question object
 
-        }
-        /**
-        * Displays the score report
-        * @param      quiz     The quiz object
-        */
-        public static void displayScore(final Quiz quiz) {
-// write your code here to display the score report
-            
-        }
     }
+    /**
+    * Displays the score report
+    * @param      quiz     The quiz object
+    */
+    public static void displayScore(final Quiz quiz) {
+// write your code here to display the score report
+        
+    }
+}
