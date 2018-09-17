@@ -1,3 +1,6 @@
+/**
+ * @ author sree gayathri : 20186044
+ */
 import java.util.Scanner;
 /**
  * Class for question.
@@ -6,7 +9,7 @@ class Question {
     /**.
      * { var_description }
      */
-    private final int ten = 10;
+    private final int t = 10;
     /**
      * { var_description }.
      */
@@ -35,7 +38,7 @@ class Question {
      * Constructs the object.
      */
     Question() {
-        choices = new String[ten];
+        choices = new String[t];
     }
     /**
      * Constructs the object.
@@ -158,7 +161,7 @@ class Quiz {
     /**.
      * { var_description }
      */
-    private final int ten = 10;
+    private final int t = 10;
     /**
      * { var_description }.
      */
@@ -175,7 +178,7 @@ class Quiz {
      * Constructs the object.
      */
     Quiz() {
-        questions = new Question[ten];
+        questions = new Question[t];
         size = 0;
     }
     /**
@@ -223,15 +226,15 @@ public final class Solution {
     /**.
      * { var_description }
      */
-    private static final int THREE = 3;
+    private static final int T3 = 3;
     /**.
      * { var_description }
      */
-    private static final int FOUR = 4;
+    private static final int F = 4;
     /**.
      * { var_description }
      */
-    private static final int FIVE = 5;
+    private static final int FV = 5;
     /**.
      * { var_description }
      */
@@ -239,7 +242,7 @@ public final class Solution {
     /**.
      * { var_description }
      */
-    private static final int TEN = 10;
+    private static final int T = 10;
     /**.
      * { var_description }
      */
@@ -247,7 +250,7 @@ public final class Solution {
     /**.
      * { var_description }
      */
-    private static String[] str = new String[TEN];
+    private static String[] str = new String[T];
     /**.
     * Constructs the object.
     */
@@ -320,28 +323,26 @@ public final class Solution {
             for (int i = 0; i < q; i++) {
                 String questions = scan.nextLine();
                 String[] items = questions.split(":");
-                if (items.length < FIVE || items[0].length() == 0) {
+                if (items.length < FV || items[0].length() == 0) {
                     throw new Exception("Error! Malformed question");
-                } else if ((items[1].split(",").length < 2) && (
-                               Integer.parseInt(items[THREE]) > 0) && (
-                               Integer.parseInt(items[FOUR]) < 0)) {
+                } else if (items[1].split(",").length < 2) {
                     throw new Exception(
                         "trick question  does not have enough answer choices");
-                } else if (Integer.parseInt(items[2]) > FOUR) {
+                } else if (Integer.parseInt(items[2]) > F) {
                     throw new Exception(
                         "Error! Correct answer choice number is out of"
                         + " range for question text 1");
-                } else if (Integer.parseInt(items[THREE]) < 0) {
+                } else if (Integer.parseInt(items[T3]) < 0) {
                     throw new Exception(
                         "Invalid max marks for question about sony");
-                } else if (Integer.parseInt(items[FOUR]) > 0) {
+                } else if (Integer.parseInt(items[F]) > 0) {
                     throw new Exception(
                         "Invalid penalty for question about sony");
                 }
                 quiz.addQuestion(new Question(items[0], items[1].split(","),
                                               Integer.parseInt(items[2]),
-                                              Integer.parseInt(items[THREE]),
-                                              Integer.parseInt(items[FOUR])));
+                                              Integer.parseInt(items[T3]),
+                                              Integer.parseInt(items[F])));
                 size1++;
             }
             System.out.println(q + " are added to the quiz");
