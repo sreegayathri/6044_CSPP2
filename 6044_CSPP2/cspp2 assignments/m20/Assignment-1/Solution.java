@@ -233,7 +233,8 @@ public final class Solution {
                 if (obj.length < 5) {
                     System.out.println("Error! Malformed question");
                     return;
-                } else if (obj[1].split(",").length < 2 && Integer.parseInt(obj[3]) > 0 && Integer.parseInt(obj[4]) < 0) {
+                } else if (obj[1].split(",").length < 2){
+                //else if (obj[1].split(",").length < 2) && Integer.parseInt(obj[3]) > 0 && Integer.parseInt(obj[4]) < 0) {
                     System.out.println("trick question  does not have enough answer choices");
                     return;
                 } else if (Integer.parseInt(obj[2]) > 4) {
