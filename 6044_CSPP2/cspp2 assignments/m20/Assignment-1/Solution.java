@@ -48,7 +48,6 @@ class Question {
         this.correctAnswer = correctAnswer1;
         this.maxMarks = maxMarks1;
         this.penalty = penalty1;
-        String response;
     }
     /**
     * { function_description }.
@@ -56,6 +55,9 @@ class Question {
     * @return     { description_of_the_return_value }
     */
     public boolean evaluateResponse(final String choice) {
+        if (choices[correctAnswer - 1].equals(choice)) {
+            return true;
+        }
         return false;
     }
     /**
@@ -64,7 +66,7 @@ class Question {
     * @return     The correct answer.
     */
     public String getCorrectAnswer() {
-        return null;
+        return Integer.toString(correctAnswer);
     }
     /**
     * Gets the question text.
@@ -100,14 +102,14 @@ class Question {
     * @param      answer  The answer
     */
     public void setResponse(final String answer) {
-
+        response = answer;
     }
     /**
     * Gets the response.
     * @return     The response.
     */
     public String getResponse() {
-        return null;
+        return response;
     }
     /**
     * Returns a string representation of the object.
@@ -115,6 +117,13 @@ class Question {
     */
     public String toString() {
         String s = "";
+        s = s + getQuestionText();
+        boolean b = evaluateResponse(response);
+        if (b) {
+            s = s + "\n" + " Correct Answer! - Marks Awarded: " + getMaxMarks();
+        } else {
+            s = s + "\n" + " Wrong Answer! - Penalty: " + getPenalty();
+        }
         return s;
     }
 }
@@ -229,32 +238,35 @@ public final class Solution {
 // write your code here to read the questions from the console
 // tokenize the question line and create the question object
 // add the question objects to the quiz class
-        if (q >= 1) {
-            System.out.println(q + " " + "are added to the quiz");
-        } else {
+        if (q == 0) {
             System.out.println("Quiz does not have questions");
-        }
-        for (int i = 0; i < q; i++) {
-            String question = scan.nextLine();
-            String[] obj = question.split(":");
-            if (obj.length < 5) {
-                System.out.println("Error! Malformed question");
-                return;
-            } else if (obj[1].split(",").length < 2) {
-                System.out.println("trick question  does not have enough answer choices");
-                return;
-            } else if (Integer.parseInt(obj[2]) > 4) {
-                System.out.println("Error! Correct answer choice number is out of range for question text 1");
-                return;
-            } else if (Integer.parseInt(obj[3]) < 0) {
-                System.out.println("Invalid max marks for question about sony");
-                return;
-            } else if (Integer.parseInt(obj[4]) > 0) {
-                System.out.println("Invalid penalty for question about sony");
-                return;
-            } else if (obj[0].length() == 0) {
-                System.out.println("Error! Malformed question");
-                return;
+            return;
+        } else {
+            for (int i = 0; i < q; i++) {
+                String questions = scan.nextLine();
+                String[] obj = questions.split(":");
+                if (obj.length < 5) {
+                    System.out.println("Error! Malformed question");
+                    return;
+                } else if (obj[1].split(",").length < 2 && Integer.parseInt(obj[3]) > 0 && Integer.parseInt(obj[4]) < 0) {
+                    System.out.println("trick question  does not have enough answer choices");
+                    return;
+                } else if (Integer.parseInt(obj[2]) > 4) {
+                    System.out.println("Error! Correct answer choice number is out of range for question text 1");
+                    return;
+                } else if (Integer.parseInt(obj[3]) < 0) {
+                    System.out.println("Invalid max marks for question about sony");
+                    return;
+                } else if (Integer.parseInt(obj[4]) > 0) {
+                    System.out.println("Invalid penalty for question about sony");
+                    return;
+                } else if (obj[0].length() == 0) {
+                    System.out.println("Error! Malformed question");
+                    return;
+                }
+            if (q >= 1) {
+                System.out.println(q + " " + "are added to the quiz");
+            }
             }
         }
     }
