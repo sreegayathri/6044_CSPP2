@@ -43,7 +43,12 @@ class Question {
     */
     Question(final String question1, final String[] choices1,
              final int correctAnswer1, final int maxMarks1, final int penalty1) {
-
+        this.questiontext = question1;
+        this.choices = choices1;
+        this.correctAnswer = correctAnswer1;
+        this.maxMarks = maxMarks1;
+        this.penalty = penalty1;
+        String response;
     }
     /**
     * { function_description }.
@@ -66,21 +71,21 @@ class Question {
     * @return     The question text.
     */
     public String getQuestionText() {
-        return null;
+        return questiontext;
     }
     /**
     * Gets the choice.
     * @return     The choice.
     */
     public String[] getChoice() {
-        return null;
+        return choices;
     }
     /**
     * Gets the maximum marks.
     * @return     The maximum marks.
     */
     public int getMaxMarks() {
-        return 1;
+        return maxMarks;
     }
     /**
     * Gets the penalty.
@@ -88,7 +93,7 @@ class Question {
     * @return     The penalty.
     */
     public int getPenalty() {
-        return 1;
+        return penalty;
     }
     /**
     * Sets the response.
@@ -224,6 +229,9 @@ public final class Solution {
 // write your code here to read the questions from the console
 // tokenize the question line and create the question object
 // add the question objects to the quiz class
+        if (q >= 1) {
+            System.out.println(q + " " + "are added to the quiz");
+        }
         if ( q == 0) {
             System.out.println("Quiz does not have questions");
         } else {
@@ -234,7 +242,6 @@ public final class Solution {
                     System.out.println("Error! Malformed question");
                     return;
                 } else if (obj[1].split(",").length < 2){
-                //else if (obj[1].split(",").length < 2) && Integer.parseInt(obj[3]) > 0 && Integer.parseInt(obj[4]) < 0) {
                     System.out.println("trick question  does not have enough answer choices");
                     return;
                 } else if (Integer.parseInt(obj[2]) > 4) {
@@ -264,6 +271,7 @@ public final class Solution {
 // write your code here to display the quiz questions on the console.
 // read the user responses from the console using scanner object.
 // store the user respone in the question object
+
         }
         /**
         * Displays the score report
@@ -271,5 +279,6 @@ public final class Solution {
         */
         public static void displayScore(final Quiz quiz) {
 // write your code here to display the score report
+            
         }
     }
