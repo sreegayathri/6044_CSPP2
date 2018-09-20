@@ -105,7 +105,7 @@ public final class Solution {
             return;
         }
         String folder = s.nextLine();
-        File file = new File("G:\\cspp2\\6044_CSPP2\\cspp2 assignments\\m23" 
+        File file = new File("G:\\cspp2\\6044_CSPP2\\cspp2 assignments\\m23"
                             + folder);
         String[] str = file.list();
         for (String files : str) {
