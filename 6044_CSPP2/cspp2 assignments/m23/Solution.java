@@ -7,22 +7,22 @@ import java.util.regex.Pattern;
 import java.util.regex.Matcher;
 // import java.io.FileNotFoundException;
 /**
- * Class for Solution.
- */
+* Class for Solution.
+*/
 public final class Solution {
     /**
-     * Constructs the object.
-     */
+    * Constructs the object.
+    */
     private Solution() {
-        //Nothing happens here.
+//Nothing happens here.
     }
     /**
-     * Converts String to Required format.
-     *
-     * @param      fileContent  The file content
-     *
-     * @return     String without delimiters
-     */
+    * Converts String to Required format.
+    *
+    * @param      fileContent  The file content
+    *
+    * @return     String without delimiters
+    */
     public static String convertString(final String fileContent) {
         String ret = "";
         Pattern p = Pattern.compile("[^0-9_]");
@@ -34,12 +34,12 @@ public final class Solution {
         return ret.toLowerCase();
     }
     /**
-     * Hashmap with word and count.
-     *
-     * @param      input  The input
-     *
-     * @return     Hashmap with word and count
-     */
+    * Hashmap with word and count.
+    *
+    * @param      input  The input
+    *
+    * @return     Hashmap with word and count
+    */
     public static HashMap<String, Integer> generateHashMap(final String input) {
         String[] inputs = input.split(" ");
         HashMap<String, Integer> map = new HashMap<>();
@@ -59,20 +59,20 @@ public final class Solution {
         return map;
     }
     /**
-     * Reads the input from file.
-     *
-     * @param      folder     The folder
-     * @param      name       The name
-     *
-     * @return     String format of file.
-     *
-     * @throws     Exception  Exception if occured.
-     */
+    * Reads the input from file.
+    *
+    * @param      folder     The folder
+    * @param      name       The name
+    *
+    * @return     String format of file.
+    *
+    * @throws     Exception  Exception if occured.
+    */
     public static String fileRead(final String folder, final String name)
-        throws Exception {
+    throws Exception {
         BufferedReader br = new BufferedReader(
             new FileReader("G:\\cspp2\\6044_CSPP2\\cspp2 assignments\\m23"
-                + folder + "\\" + name));
+                           + folder + "\\" + name));
         String content = "";
         String line;
         try {
@@ -80,7 +80,7 @@ public final class Solution {
                 content += line;
             }
         } catch (Exception e) {
-                e.printStackTrace();
+            e.printStackTrace();
         } finally {
             try {
                 br.close();
@@ -91,12 +91,12 @@ public final class Solution {
         return content;
     }
     /**
-     * The main function.
-     *
-     * @param      args       The arguments
-     *
-     * @throws     Exception  throws exception if occured
-     */
+    * The main function.
+    *
+    * @param      args       The arguments
+    *
+    * @throws     Exception  throws exception if occured
+    */
     public static void main(final String[] args) throws Exception {
         Similarity sim = new Similarity();
         Scanner s = new Scanner(System.in);
@@ -105,7 +105,8 @@ public final class Solution {
             return;
         }
         String folder = s.nextLine();
-        File file = new File("G:\\cspp2\\6044_CSPP2\\cspp2 assignments\\m23" + folder);
+        File file = new File("G:\\cspp2\\6044_CSPP2\\cspp2 assignments\\m23" 
+                            + folder);
         String[] str = file.list();
         for (String files : str) {
             String content = fileRead(folder, files);
