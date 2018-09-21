@@ -23,7 +23,7 @@ public final class Solution {
     *
     * @return     String without delimiters
     */
-    public static String convertString(final String fileContent) throws Exception{
+    public static String convertString(final String fileContent) {
         String ret = "";
         Pattern p = Pattern.compile("[^a-zA-Z0-9_]");
         Matcher match = p.matcher(fileContent);
@@ -40,7 +40,7 @@ public final class Solution {
     *
     * @return     Hashmap with word and count
     */
-    public static HashMap<String, Integer> generateHashMap(final String input) throws Exception{
+    public static HashMap<String, Integer> generateHashMap(final String input) {
         String[] inputs = input.split(" ");
         HashMap<String, Integer> map = new HashMap<>();
         for (int i = 0; i < inputs.length; i++) {
