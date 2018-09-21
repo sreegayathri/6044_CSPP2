@@ -71,7 +71,7 @@ public final class Solution {
     public static String fileRead(final String folder, final String name)
     throws Exception {
         BufferedReader br = new BufferedReader(
-            new FileReader("C:\\Windows\\System32\\cmd.exe"
+            new FileReader("G:\\cspp2\\6044_CSPP2\\cspp2 assignments\\m23"
                            + folder + "\\" + name));
         String content = "";
         String line;
@@ -105,7 +105,7 @@ public final class Solution {
             return;
         }
         String folder = s.nextLine();
-        File file = new File("C:\\Windows\\System32\\cmd.exe"
+        File file = new File("G:\\cspp2\\6044_CSPP2\\cspp2 assignments\\m23"
                             + folder);
         String[] str = file.list();
         for (String files : str) {
