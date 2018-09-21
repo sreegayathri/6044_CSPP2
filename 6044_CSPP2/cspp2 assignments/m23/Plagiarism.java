@@ -60,7 +60,7 @@ class Plagarism {
         //loadStopWords();
         //removeStopwords(tokens);
         List<String> wlist = removeStopwords(tokens);
-        for (int i = 0; i < wlist;.size(); i++) {
+        for (int i = 0; i < wlist.size(); i++) {
         //for (String token : tokens) {
             if (ht.contain(wlist.get(i))) {
                 ht.put(wlist.get(i), ht.get(wlist.get(i)) + 1);
