@@ -23,7 +23,7 @@ public final class Solution {
     *
     * @return     String without delimiters
     */
-    public static String convertString(final String fileContent) {
+    public static String convertString(final String fileContent) throws Exception{
         String ret = "";
         Pattern p = Pattern.compile("[^a-zA-Z0-9_]");
         Matcher match = p.matcher(fileContent);
@@ -40,7 +40,7 @@ public final class Solution {
     *
     * @return     Hashmap with word and count
     */
-    public static HashMap<String, Integer> generateHashMap(final String input) {
+    public static HashMap<String, Integer> generateHashMap(final String input) throws Exception{
         String[] inputs = input.split(" ");
         HashMap<String, Integer> map = new HashMap<>();
         for (int i = 0; i < inputs.length; i++) {
@@ -71,7 +71,7 @@ public final class Solution {
     public static String fileRead(final String folder, final String name)
     throws Exception {
         BufferedReader br = new BufferedReader(
-            new FileReader("G:\\cspp2\\6044_CSPP2\\cspp2 assignments\\m23"
+            new FileReader("C:\\Windows\\System32\\cmd.exe"
                            + folder + "\\" + name));
         String content = "";
         String line;
@@ -105,7 +105,7 @@ public final class Solution {
             return;
         }
         String folder = s.nextLine();
-        File file = new File("G:\\cspp2\\6044_CSPP2\\cspp2 assignments\\m23"
+        File file = new File("C:\\Windows\\System32\\cmd.exe"
                             + folder);
         String[] str = file.list();
         for (String files : str) {
