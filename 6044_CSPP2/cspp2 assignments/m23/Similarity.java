@@ -73,12 +73,12 @@ class Similarity {
     }
 
     public void documentSimilarity() {
-        if(documentArraySize == 0) {
+        if (documentArraySize == 0) {
             System.out.print("empty directory");
             return;
         }
-        for(int i=0; i < documentArraySize; i++) {
-            if(i == 0) {
+        for (int i=0; i < documentArraySize; i++) {
+            if (i == 0) {
                 System.out.print("      ");
                 System.out.print("  ");
                 System.out.print("\t");
