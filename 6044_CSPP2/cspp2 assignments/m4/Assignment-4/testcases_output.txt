@@ -1,0 +1,40 @@
+########## Testcase 0: Passed ##########
+Expected Output: 
+olleH
+
+Your Output: 
+olleH
+----------------------------------------
+
+########## Testcase 1: Passed ##########
+Expected Output: 
+madam
+
+Your Output: 
+madam
+----------------------------------------
+
+########## Testcase 2: Passed ##########
+Expected Output: 
+321olleh
+
+Your Output: 
+321olleh
+----------------------------------------
+
+########## Testcase 3: Passed ##########
+Expected Output: 
+gninroM dooG
+
+Your Output: 
+gninroM dooG
+----------------------------------------
+
+########## Testcase 4: Passed ##########
+Expected Output: 
+.detneiro-tcejbo dna desab-ssalc ,tnerrucnoc si taht egaugnal gnimmargorp-retupmoc esoprup-lareneg a si avaJ
+
+Your Output: 
+.detneiro-tcejbo dna desab-ssalc ,tnerrucnoc si taht egaugnal gnimmargorp-retupmoc esoprup-lareneg a si avaJ
+----------------------------------------
+
