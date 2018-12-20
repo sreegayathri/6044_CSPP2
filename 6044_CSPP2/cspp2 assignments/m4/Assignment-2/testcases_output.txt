@@ -1,0 +1,40 @@
+########## Testcase 0: Passed ##########
+Expected Output: 
+2 2 3
+4 6 6
+7 8 10
+
+Your Output: 
+2 2 3
+4 6 6
+7 8 10
+----------------------------------------
+
+########## Testcase 1: Passed ##########
+Expected Output: 
+2 2 1
+4 6 1
+7 8 2
+
+Your Output: 
+2 2 1
+4 6 1
+7 8 2
+----------------------------------------
+
+########## Testcase 2: Passed ##########
+Expected Output: 
+not possible
+
+Your Output: 
+not possible
+----------------------------------------
+
+########## Testcase 3: Passed ##########
+Expected Output: 
+not possible
+
+Your Output: 
+not possible
+----------------------------------------
+
