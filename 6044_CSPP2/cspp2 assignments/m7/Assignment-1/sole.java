@@ -6,7 +6,7 @@ class sole {
         String word = sc.next();
         int n = word.length();
         int num = 2 + 2 + 2;
-        if(n == num){
+        if(n >= num){
             System.out.println("true");
         } else{
             System.out.println("false");

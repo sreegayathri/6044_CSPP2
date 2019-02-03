@@ -14,20 +14,20 @@ Your Output:
 false
 ----------------------------------------
 
-########## Testcase 2: Failed ##########
+########## Testcase 2: Passed ##########
 Expected Output: 
 true
 
 Your Output: 
-false
+true
 ----------------------------------------
 
-########## Testcase 3: Failed ##########
+########## Testcase 3: Passed ##########
 Expected Output: 
 true
 
 Your Output: 
-false
+true
 ----------------------------------------
 
 ########## Testcase 4: Passed ##########
