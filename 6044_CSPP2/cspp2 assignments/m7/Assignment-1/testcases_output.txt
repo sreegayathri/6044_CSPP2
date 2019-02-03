@@ -1,0 +1,40 @@
+########## Testcase 0: Failed ##########
+Expected Output: 
+false
+
+Your Output: 
+False
+----------------------------------------
+
+########## Testcase 1: Failed ##########
+Expected Output: 
+false
+
+Your Output: 
+False
+----------------------------------------
+
+########## Testcase 2: Failed ##########
+Expected Output: 
+true
+
+Your Output: 
+False
+----------------------------------------
+
+########## Testcase 3: Failed ##########
+Expected Output: 
+true
+
+Your Output: 
+False
+----------------------------------------
+
+########## Testcase 4: Failed ##########
+Expected Output: 
+true
+
+Your Output: 
+True
+----------------------------------------
+

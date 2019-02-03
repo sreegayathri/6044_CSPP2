@@ -1,0 +1,20 @@
+Starting audit...
+[ERROR] G:\cspp2\6044_CSPP2\cspp2 assignments\m7\Assignment-1\sole.java:0: File does not end with a newline. [NewlineAtEndOfFile]
+[ERROR] G:\cspp2\6044_CSPP2\cspp2 assignments\m7\Assignment-1\sole.java:2: Missing a Javadoc comment. [JavadocType]
+[ERROR] G:\cspp2\6044_CSPP2\cspp2 assignments\m7\Assignment-1\sole.java:2:1: Utility classes should not have a public or default constructor. [HideUtilityClassConstructor]
+[ERROR] G:\cspp2\6044_CSPP2\cspp2 assignments\m7\Assignment-1\sole.java:2:7: Name 'sole' must match pattern '^[A-Z][a-zA-Z0-9]*$'. [TypeName]
+[ERROR] G:\cspp2\6044_CSPP2\cspp2 assignments\m7\Assignment-1\sole.java:3:5: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] G:\cspp2\6044_CSPP2\cspp2 assignments\m7\Assignment-1\sole.java:3:11: '{' is not preceded with whitespace. [WhitespaceAround]
+[ERROR] G:\cspp2\6044_CSPP2\cspp2 assignments\m7\Assignment-1\sole.java:3:12: '{' is not followed by whitespace. [WhitespaceAround]
+[ERROR] G:\cspp2\6044_CSPP2\cspp2 assignments\m7\Assignment-1\sole.java:3:12: '}' is not preceded with whitespace. [WhitespaceAround]
+[ERROR] G:\cspp2\6044_CSPP2\cspp2 assignments\m7\Assignment-1\sole.java:4:5: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] G:\cspp2\6044_CSPP2\cspp2 assignments\m7\Assignment-1\sole.java:4:29: Parameter args should be final. [FinalParameters]
+[ERROR] G:\cspp2\6044_CSPP2\cspp2 assignments\m7\Assignment-1\sole.java:9:11: 'if' is not followed by whitespace. [WhitespaceAfter]
+[ERROR] G:\cspp2\6044_CSPP2\cspp2 assignments\m7\Assignment-1\sole.java:9:21: '{' is not preceded with whitespace. [WhitespaceAround]
+[ERROR] G:\cspp2\6044_CSPP2\cspp2 assignments\m7\Assignment-1\sole.java:11:15: 'else' is not followed by whitespace. [WhitespaceAfter]
+[ERROR] G:\cspp2\6044_CSPP2\cspp2 assignments\m7\Assignment-1\sole.java:11:15: '{' is not preceded with whitespace. [WhitespaceAround]
+[ERROR] G:\cspp2\6044_CSPP2\cspp2 assignments\m7\Assignment-1\sole.java:14: Line has trailing spaces. [RegexpSingleline]
+Audit done.
+Checkstyle ends with 15 errors.
+Starting audit...
+Audit done.

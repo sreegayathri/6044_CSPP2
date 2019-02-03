@@ -7,7 +7,7 @@ class InputValidator {
     /**.
      * class inside
      */
-    private final int range = 6;
+    private final int range = 2 + 2 + 2;
     /**.
      * { magic 6 init     }
      */
