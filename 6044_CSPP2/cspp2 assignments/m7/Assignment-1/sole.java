@@ -7,9 +7,9 @@ class sole {
         int n = word.length();
         int num = 2 + 2 + 2;
         if(n == num){
-            System.out.println("True");
+            System.out.println("true");
         } else{
-            System.out.println("False");
+            System.out.println("false");
         }
     }   
 }
