@@ -1,0 +1,5 @@
+Starting audit...
+[ERROR] G:\cspp2\6044_CSPP2\cspp2 assignments\m2\Assignment-2\Solution.java:0: File does not end with a newline. [NewlineAtEndOfFile]
+[ERROR] G:\cspp2\6044_CSPP2\cspp2 assignments\m2\Assignment-2\Solution.java:38:8: File contains tab characters (this is the first instance). [FileTabCharacter]
+Audit done.
+Checkstyle ends with 2 errors.
